@@ -19,6 +19,13 @@ module.exports = {
         pathToConfigModule: `src/utils/Typography.ts`,
       },
     },
+    {
+      resolve: `gatsby-plugin-output`,
+      options: {
+        // default values
+        publicPath: "docs",
+        rmPublicFolder: false,
+      },
+    },
   ],
-  pathPrefix: `/hp`,
 }
