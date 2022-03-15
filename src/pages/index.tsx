@@ -1,6 +1,7 @@
 import React from "react"
 import { css } from "@emotion/react"
-import Head from "../components/head"
+import Layout from "../components/layout"
+import Benefit from "../components/benefit"
 
 export default function Home() {
   const textColor = css({
@@ -9,8 +10,9 @@ export default function Home() {
 
   return (
     <>
-      <Head title="ミルコマ" description="見るだけのコマ管理ツール" />
-      <div css={textColor}>Hello world!</div>
+      <Layout>
+        <Benefit />
+      </Layout>
     </>
   )
 }

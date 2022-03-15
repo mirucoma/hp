@@ -19,6 +19,10 @@ export default (props: headProps) => {
           name: "description",
           content: description,
         },
+        {
+          name: 'viewport',
+          content: 'width=device-width, initial-scale=1.0',
+        }
       ]}
     />
   )
