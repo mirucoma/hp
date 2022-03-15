@@ -5,7 +5,7 @@
   "version": "0.1.0",
   "license": "0BSD",
   "scripts": {
-    "build": "gatsby build --prefix-paths && mv public/ docs && rm -rf public/",
+    "build": "rm -rf docs && gatsby build --prefix-paths && mv public docs && rm -rf public/",
     "dev": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "gatsby develop",
