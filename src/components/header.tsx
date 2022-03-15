@@ -1,6 +1,8 @@
 import React from "react"
 import { css } from "@emotion/react"
 import color from "../styles/color"
+import { StaticImage } from "gatsby-plugin-image"
+import { withPrefix } from 'gatsby'
 
 export default () => {
   const barWrap = css({
@@ -37,7 +39,7 @@ export default () => {
     <>
       <header>
         <div css={barWrap}>
-          <img css={logoImage} src="/images/logo.png" alt="" />
+          <StaticImage css={logoImage} src={"../../static/images/logo.png"} alt="" />
           <div css={content}>
             <p css={subtitled}>プラン紹介</p>
             <p css={subtitled}>利用料金</p>
