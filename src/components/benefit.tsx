@@ -3,6 +3,8 @@ import { css } from "@emotion/react"
 import color from "../styles/color"
 import mq from "../styles/mediaQuery"
 
+import { StaticImage } from "gatsby-plugin-image"
+
 export default () => {
   const benefitWrapper = css({
     display: "flex",
@@ -16,6 +18,7 @@ export default () => {
 
   const popWrapper = css({
     marginLeft: "16px",
+    [mq[0]]: { textAlign: "center" },
   })
 
   const popText = css({
@@ -25,6 +28,7 @@ export default () => {
 
   const subText = css({
     color: "white",
+    fontSize: "2rem",
   })
 
   const startButton = css({
@@ -34,7 +38,7 @@ export default () => {
     borderRadius: "40px",
     backgroundColor: color.secondary,
     color: "white",
-    marginTop: "56px"
+    marginTop: "56px",
   })
 
   const vector = css({
@@ -46,7 +50,7 @@ export default () => {
     position: "relative",
     left: "16%",
     display: "block",
-    [mq[2]]:{display: "none"},
+    [mq[2]]: { display: "none" },
   })
 
   const inVectorImage = css({
@@ -74,7 +78,7 @@ export default () => {
         <button css={startButton}>今すぐ始める</button>
       </div>
       <div css={vector}>
-        <img
+        <StaticImage
           css={inVectorImage}
           src="https://placehold.jp/800x400.png"
           alt=""

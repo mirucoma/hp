@@ -12,7 +12,7 @@ export default (props: headProps) => {
       htmlAttributes={{
         lang: "ja",
       }}
-      link={[{ rel: "shortcut icon", href: "../static/favicon.ico" }]}
+      link={[{ rel: "icon", href: "../../static/favicon.ico" }]}
       title={title}
       meta={[
         {
@@ -20,9 +20,9 @@ export default (props: headProps) => {
           content: description,
         },
         {
-          name: 'viewport',
-          content: 'width=device-width, initial-scale=1.0',
-        }
+          name: "viewport",
+          content: "width=device-width, initial-scale=1.0",
+        },
       ]}
     />
   )
