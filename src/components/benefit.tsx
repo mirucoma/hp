@@ -9,26 +9,29 @@ export default () => {
   const benefitWrapper = css({
     display: "flex",
     height: "680px",
+    [mq[0]]: {height: "228px"},
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: color.primary,
+    backgroundColor: color.primary.main,
 
     overflow: "hidden",
   })
 
   const popWrapper = css({
-    marginLeft: "16px",
-    [mq[0]]: { textAlign: "center" },
+    marginLeft: "16px"
   })
 
   const popText = css({
-    fontSize: "64px",
+    fontSize: "8rem",
+    fontWeight: "700",
+    [mq[0]] : {fontSize: "5rem"},
     color: "white",
   })
 
   const subText = css({
     color: "white",
-    fontSize: "2rem",
+    fontSize: "1.8rem",
+    marginTop: 6
   })
 
   const startButton = css({
@@ -39,6 +42,8 @@ export default () => {
     backgroundColor: color.secondary,
     color: "white",
     marginTop: "56px",
+
+    [mq[0]]: { display: "none"},
   })
 
   const vector = css({

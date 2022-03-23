@@ -3,19 +3,27 @@ import { css } from "@emotion/react"
 import color from "../styles/color"
 import mq from "../styles/mediaQuery"
 
-import { StaticImage } from "gatsby-plugin-image"
+export type advantageCardProps = {
+  title: string
+  chips: string[]
+  img: string
+  points: string[]
+}
 
-export default () => {
+export default (props: advantageCardProps) => {
+  const { title, chips, img, points } = props
+
   const cardWrapper = css({
     boxShadow:
       "0px 0px 2px rgba(0, 0, 0, 0.14), 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 3px rgba(0, 0, 0, 0.2)",
     textAlign: "center",
+    width: "380px"
   })
 
   const cardTitle = css({
     fontSize: "2.5rem",
     fontWeight: "700",
-    color: color.primary,
+    color: color.primary.main,
     padding: "20px 0",
   })
 
@@ -36,6 +44,11 @@ export default () => {
     display: "inline-block",
   })
 
+  const cardImage = css({
+    display: "inline-block",
+    textAlign: "center"
+  })
+
   const pointList = css({
     padding: "16px",
     paddingTop: "24px",
@@ -50,7 +63,7 @@ export default () => {
 
   const detailLink = css({
     fontSize: "1.4rem",
-    color: color.primary,
+    color: color.primary.main,
     padding: "10px",
     border: "1px solid",
     display: "inline-block",
@@ -60,19 +73,22 @@ export default () => {
 
   return (
     <div css={cardWrapper}>
-      <h4 css={cardTitle}>入退室プラン</h4>
+      <h4 css={cardTitle}>{title}</h4>
 
       <div css={chipWrapper}>
-        <p css={chipText}>入退室機能</p>
-        <p css={chipText}>スマホアプリ</p>
+        {chips.map((text, index) => (
+          <p css={chipText} key={index}>
+            {text}
+          </p>
+        ))}
       </div>
 
-      <StaticImage src="https://placehold.jp/280x140.png" alt="" />
+      <img css={cardImage} src={img} alt="" />
 
       <ul css={pointList}>
-        <li>お手元のタブレットですぐに始められる</li>
-        <li>入退室で重要なプッシュ通知を送れます</li>
-        <li>業界最安値でご利用できます</li>
+        {points.map((text, index) => (
+          <li key={index}>{text}</li>
+        ))}
       </ul>
 
       <div css={detailWrapper}>

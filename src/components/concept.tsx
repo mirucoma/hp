@@ -11,15 +11,17 @@ export default () => {
     alignItems: "center",
     gap: "48px",
 
-    [mq[1]]: { flexFlow: "column" },
+    [mq[1]]: { flexFlow: "column", gap: 0 },
   })
 
   const conceptText = css({
     fontSize: "4rem",
-    color: color.primary,
     fontWeight: "700",
-    borderLeft: "4px solid",
+    color: color.primary.main,
+    borderLeft: "3px solid",
     padding: "0 16px",
+
+    [mq[0]]: { fontSize: "1.9rem", marginTop: 3,borderRight: "3px solid"},
   })
 
   const detail = css({
@@ -29,7 +31,7 @@ export default () => {
     lineHeight: "28px",
     letterSpacing: "2px",
 
-    [mq[1]]: { width: "100%", padding: "16px" },
+    [mq[1]]: { width: "100%", padding: "24px" },
   })
   return (
     <div css={conceptWrapper}>

@@ -30,6 +30,7 @@
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
     "react-typography": "^0.16.20",
+    "swiper": "^8.0.7",
     "typography": "^0.16.21",
     "typography-theme-github": "^0.16.19"
   },
