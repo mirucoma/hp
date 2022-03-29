@@ -4,6 +4,7 @@ import color from "../styles/color"
 import mq from "../styles/mediaQuery"
 import { Navigation, Pagination } from "swiper"
 import { Swiper, SwiperSlide } from "swiper/react"
+import ArrowImage from "../../static/images/arrow.png"
 import "swiper/css"
 
 import AdvantageCard from "./advantageCard"
@@ -36,8 +37,27 @@ export default () => {
 
   const sliderWrapper = css({
     display: "none",
-    [mq[0]]: { display: "block", width: "380px", margin: "0 auto" },
+    [mq[0]]: { display: "block", width: "380px", margin: "0 auto",},
+    ".swiper-button-next":{
+      content: `url(${ArrowImage})`,
+      backgroundColor: "gray",
+      padding: "4px",
+      borderRadius: "50%",
+      width: "30px",
+      height: "30px",
+    },
+
+    ".swiper-button-prev":{
+      content: `url(${ArrowImage})`,
+      backgroundColor: "gray",
+      padding: "4px",
+      borderRadius: "50%",
+      width: "30px",
+      height: "30px",
+      transform: "rotate(180deg)"
+    }
   })
+
 
   return (
     <>
@@ -78,6 +98,7 @@ export default () => {
           css={sliderWrapper}
           modules={[Navigation, Pagination]}
           slidesPerView={1}
+          spaceBetween={50}
           navigation
           pagination={{ clickable: true }}
           onSlideChange={() => console.log("slide change")}

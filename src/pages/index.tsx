@@ -4,6 +4,8 @@ import Layout from "../components/layout"
 import Benefit from "../components/benefit"
 import Concept from "../components/concept"
 import Advantage from "../components/advantage"
+import Problem from "../components/problem"
+import CustomerVoice from "../components/customerVoice"
 
 // const global = css`
 //   html {
@@ -34,6 +36,8 @@ export default function Home() {
         <Benefit />
         <Concept />
         <Advantage />
+        <Problem />
+        <CustomerVoice />
       </Layout>
     </>
   )
