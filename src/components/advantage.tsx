@@ -101,7 +101,6 @@ export default () => {
           spaceBetween={50}
           navigation
           pagination={{ clickable: true }}
-          onSlideChange={() => console.log("slide change")}
         >
           <SwiperSlide>
             <AdvantageCard

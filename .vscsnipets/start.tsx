@@ -4,14 +4,11 @@ import color from "../styles/color"
 import mq from "../styles/mediaQuery"
 
 export default () => {
-  const customerVoiceWrapper = css({
-    textAlign: "center",
-    marginTop: "48px",
+  const Wrapper = css({
   })
-
   return (
     <>
-      <div css={customerVoiceWrapper}>
+      <div css={Wrapper}>
    
       </div>
     </>

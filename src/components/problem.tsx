@@ -2,7 +2,6 @@ import React from "react"
 import { css } from "@emotion/react"
 import color from "../styles/color"
 import mq from "../styles/mediaQuery"
-import { StaticImage } from "gatsby-plugin-image"
 
 export default () => {
 
