@@ -5,7 +5,7 @@ import mq from "../styles/mediaQuery"
 import { Navigation } from "swiper"
 
 import { Swiper, SwiperSlide } from "swiper/react"
-import { Swiper as SwiperType }  from "swiper/types"
+import { Swiper as SwiperType } from "swiper/types"
 
 type slideDataType = {
   [key: number]: Array<{
@@ -15,7 +15,7 @@ type slideDataType = {
   }>
 }
 
-const slideKeys = ["入退室管理プラン", "メッセージプラン", "請求書管理プラン"]
+const slideKeys = ["入退室管理プラン", "メッセージプラン", "請求書管理プラン","テストプラン","テストプラン２"]
 const slideData: slideDataType = [
   [
     {
@@ -61,9 +61,9 @@ export default () => {
   const [swiper, setSwiper] = useState<SwiperType>()
   const [active, setActive] = useState<number>(0)
 
-  const handleChangeActive = (index:number) => {
+  const handleChangeActive = (index: number) => {
     setActive(index)
-    swiper?.slideTo(0,500)
+    swiper?.slideTo(0, 500)
   }
 
   const detailWrapper = css({
@@ -81,11 +81,12 @@ export default () => {
     display: "flex",
     justifyContent: "center",
     gap: "48px",
+    [mq[0]]: { flexDirection: "column", gap: "16px" },
   })
 
   const list = css({
     backgroundColor: "white",
-    width: "30%",
+    width: "32%",
     textAlign: "left",
     boxShadow:
       "rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px",
@@ -100,20 +101,51 @@ export default () => {
     "li:hover": {
       backgroundColor: color.primary.light,
     },
+
+    [mq[0]]: {
+      width: "100%",
+      backgroundColor: "transparent",
+      boxShadow: "none",
+      ul: {
+        display: "flex",
+        gap: "16px",
+        overflowX: "scroll",
+      },
+      li:{
+        fontSize: "1rem",
+        color: "gray",
+        padding: "8px",
+        border: "1px solid gray",
+        borderRadius: "14px",
+        flex:" 0 0 auto",
+      }
+    },
   })
 
   const activePlan = css({
     borderLeft: "4px solid",
-    borderColor: color.primary.main,
-    color: color.primary.main,
+    borderColor: color.primary.main + "!important",
+    color: color.primary.main + " !important",
+
   })
 
   const sliderWrapper = css({
     backgroundColor: "white",
     padding: "16px",
+    width: "68%",
     maxWidth: "880px",
+    height: "auto",
     boxShadow:
       "rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px",
+    [mq[0]]: {
+      width: "100%",
+    },
+  })
+
+  const slideImage = css({
+    width: "100%",
+    maxWidth: "100%",
+    height: "auto",
   })
 
   const slideTextWrapper = css({
@@ -130,7 +162,7 @@ export default () => {
   })
 
   const slideText = css({
-    padding: "8px"
+    padding: "8px",
   })
 
   const buttonWraopped = css({
@@ -138,7 +170,7 @@ export default () => {
     ".swiper-button-disabled": {
       color: "gray",
     },
-    marginTop: "8px"
+    marginTop: "8px",
   })
   const button = css({
     backgroundColor: "transparent",
@@ -159,11 +191,12 @@ export default () => {
         <div css={detailBody}>
           <div css={list}>
             <ul>
-              {/* <li>入退室管理プラン</li>
-              <li>メッセージプラン</li>
-              <li>請求書管理プラン</li> */}
               {slideKeys.map((key: string, index: number) => (
-                <li css={index == active ? activePlan : ""} onClick={() => handleChangeActive(index)} key={index}>
+                <li
+                  css={index == active ? activePlan : ""}
+                  onClick={() => handleChangeActive(index)}
+                  key={index}
+                >
                   {key}
                 </li>
               ))}
@@ -184,7 +217,7 @@ export default () => {
             >
               {slideData[active].map((data, index) => (
                 <SwiperSlide key={index}>
-                  <img src={data.image} alt="" />
+                  <img css={slideImage} src={data.image} alt="" />
 
                   <div css={slideTextWrapper}>
                     <p css={slideTitle}>{data.title}</p>

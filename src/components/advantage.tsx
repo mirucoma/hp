@@ -31,13 +31,13 @@ export default () => {
     gap: "40px",
     flexWrap: "wrap",
     width: "100%",
-    [mq[0]]: { display: "none" },
+    [mq[0]]: { display: "none"},
     padding: "56px 0",
   })
 
   const sliderWrapper = css({
     display: "none",
-    [mq[0]]: { display: "block", width: "380px", margin: "0 auto",},
+    [mq[0]]: { display: "block", width: "380px", margin: "0 auto"},
     ".swiper-button-next":{
       content: `url(${ArrowImage})`,
       backgroundColor: "gray",
