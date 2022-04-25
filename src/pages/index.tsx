@@ -8,6 +8,7 @@ import Problem from "../components/problem"
 import CustomerVoice from "../components/customerVoice"
 import Detail from "../components/detail"
 import QandA from "../components/qandA"
+import Price from "../components/price"
 
 // const global = css`
 //   html {
@@ -42,6 +43,7 @@ export default function Home() {
         <CustomerVoice />
         <Detail />
         <QandA />
+        <Price />
       </Layout>
     </>
   )

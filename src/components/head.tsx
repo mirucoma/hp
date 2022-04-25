@@ -12,7 +12,9 @@ export default (props: headProps) => {
       htmlAttributes={{
         lang: "ja",
       }}
-      link={[{ rel: "icon", href: "../../static/favicon.ico" }]}
+      link={[
+        { rel: "icon", href: "/favicon.ico" },
+      ]}
       title={title}
       meta={[
         {

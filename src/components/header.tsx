@@ -40,7 +40,9 @@ export default () => {
     marginRight: "16px",
     color: "white",
     fontSize: "2rem",
-
+    display: "flex",
+    alignItems: "center",
+    gap: "8px",
     [mq[0]]: { padding: "8px" },
   })
 
@@ -60,7 +62,8 @@ export default () => {
             <p css={subtitled}>お知らせ</p>
             <div>
               <div css={loginButton}>
-                <p>　　ログイン</p>
+                <StaticImage css={{width: "20px", height: "18px"}} src={"../../static/images/join-logo.png"} alt={""} />
+                <p>ログイン</p>
               </div>
             </div>
           </div>

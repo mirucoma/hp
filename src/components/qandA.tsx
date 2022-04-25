@@ -3,6 +3,7 @@ import { css } from "@emotion/react"
 import color from "../styles/color"
 import mq from "../styles/mediaQuery"
 import DownArrowImage from "../../static/images/down-arrow.png"
+import UpArrowImage from "../../static/images/up-arrow.png"
 import QandABackgroundImage from "../../static/images/qandaBg.png"
 
 type QandA = {
@@ -26,17 +27,19 @@ export default () => {
     fontSize: "1.7rem",
     marginTop: "80px",
     "details > summary::after": {
-      content: `"↓"`,
+      content: `url(${DownArrowImage})`,
+      transform: "scale(0.7)",
+      [mq[0]]: { transform: "scale(0.5)", position: "absolute",right: "20px",top: "16px" },
     },
     "details[open] > summary::after": {
-      content: '"↑"',
+      content: `url(${UpArrowImage})`,
     },
 
     backgroundImage: `url(${QandABackgroundImage})`,
     backgroundRepeat: "no-repeat",
     backgroundAttachment: "fixed",
     backgroundPosition: "right 0px bottom 0px",
-    backgroundSize: "30%"
+    backgroundSize: "30%",
   })
 
   const topicWrapper = css({
@@ -50,6 +53,7 @@ export default () => {
 
   const drawerWrapper = css({
     backgroundColor: "white",
+    position: "relative",
     fontSize: "3.2rem",
     width: "60%",
     margin: "0 auto",
@@ -66,7 +70,6 @@ export default () => {
     color: color.primary.main,
     userSelect: "none",
     cursor: "pointer",
-    listStyleType: "▶️",
     display: "flex",
     alignItems: "baseline",
   })
