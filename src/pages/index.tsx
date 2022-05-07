@@ -9,6 +9,7 @@ import CustomerVoice from "../components/customerVoice"
 import Detail from "../components/detail"
 import QandA from "../components/qandA"
 import Price from "../components/price"
+import HowToPay from "../components/howToPay"
 
 // const global = css`
 //   html {
@@ -28,7 +29,7 @@ const global = css({
   "*": {
   margin: "0",
   padding: "0",
-}
+},
 })
 
 export default function Home() {
@@ -44,6 +45,7 @@ export default function Home() {
         <Detail />
         <QandA />
         <Price />
+        <HowToPay />
       </Layout>
     </>
   )

@@ -7,56 +7,8 @@ import { Navigation } from "swiper"
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Swiper as SwiperType } from "swiper/types"
 
-type slideDataType = {
-  [key: number]: Array<{
-    image: string
-    title: string
-    detail: string
-  }>
-}
+import { plans, slideData } from "../datas/content"
 
-const slideKeys = ["入退室管理プラン", "メッセージプラン", "請求書管理プラン","テストプラン","テストプラン２"]
-const slideData: slideDataType = [
-  [
-    {
-      image: "https://placehold.jp/880x443.png",
-      title: "入退室履歴",
-      detail:
-        "入退室履歴では生徒1人1人の滞在時間の把握やいつ来ていたかがわかるので月謝の回数確認に重宝します。また、入退室の履歴を編集することができ、間違って入室や退室してしまった際には後から変更をすることができます。",
-    },
-    {
-      image: "https://placehold.jp/880x443.png",
-      title: "test",
-      detail: "test",
-    },
-  ],
-  [
-    {
-      image: "https://placehold.jp/880x443.png",
-      title: "メッセージ履歴",
-      detail:
-        "入退室履歴では生徒1人1人の滞在時間の把握やいつ来ていたかがわかるので月謝の回数確認に重宝します。また、入退室の履歴を編集することができ、間違って入室や退室してしまった際には後から変更をすることができます。",
-    },
-    {
-      image: "https://placehold.jp/880x443.png",
-      title: "test",
-      detail: "test",
-    },
-  ],
-  [
-    {
-      image: "https://placehold.jp/880x443.png",
-      title: "請求書履歴",
-      detail:
-        "入退室履歴では生徒1人1人の滞在時間の把握やいつ来ていたかがわかるので月謝の回数確認に重宝します。また、入退室の履歴を編集することができ、間違って入室や退室してしまった際には後から変更をすることができます。",
-    },
-    {
-      image: "https://placehold.jp/880x443.png",
-      title: "test",
-      detail: "test",
-    },
-  ],
-]
 export default () => {
   const [swiper, setSwiper] = useState<SwiperType>()
   const [active, setActive] = useState<number>(0)
@@ -111,14 +63,14 @@ export default () => {
         gap: "16px",
         overflowX: "scroll",
       },
-      li:{
+      li: {
         fontSize: "1rem",
         color: "gray",
         padding: "8px",
         border: "1px solid gray",
         borderRadius: "14px",
-        flex:" 0 0 auto",
-      }
+        flex: " 0 0 auto",
+      },
     },
   })
 
@@ -126,7 +78,6 @@ export default () => {
     borderLeft: "4px solid",
     borderColor: color.primary.main + "!important",
     color: color.primary.main + " !important",
-
   })
 
   const sliderWrapper = css({
@@ -191,7 +142,7 @@ export default () => {
         <div css={detailBody}>
           <div css={list}>
             <ul>
-              {slideKeys.map((key: string, index: number) => (
+              {plans.map((key: string, index: number) => (
                 <li
                   css={index == active ? activePlan : ""}
                   onClick={() => handleChangeActive(index)}
