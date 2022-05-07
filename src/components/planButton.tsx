@@ -73,13 +73,13 @@ export default (props: planButtonProps) => {
       {active ? (
         <img
           css={{ width: "16px", height: "16px", margin: "8px" }}
-          src="/images/select.png"
+          src="../../static/images/select.png"
           alt=""
         />
       ) : (
         <img
           css={{ width: "16px", height: "16px", margin: "8px" }}
-          src="/images/disableSelect.png"
+          src="../../static/images/disableSelect.png"
           alt=""
         />
       )}
