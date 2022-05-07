@@ -87,19 +87,19 @@ export const slideData: slideDataType = [
 export const planButtonData: planButtonDataType = [
   {
     title: "入退室管理プラン",
-    image: "../../static/images/joinPlanButtonLogo.png",
+    image: "/images/joinPlanButtonLogo.png",
     priceText: "1,100 円／月",
     chips: ["入退室機能", "スマホアプリ"],
   },
   {
     title: "メッセージ管理プラン",
-    image: "../../static/images/messagePlanButtonLogo.png",
+    image: "/images/messagePlanButtonLogo.png",
     priceText: "4,400 円／月",
     chips: ["メッセージ機能", "お知らせ機能", "スマホアプリ"],
   },
   {
     title: "請求書管理プラン",
-    image: "../../static/images/billPlanButtonLogo.png",
+    image: "/images/billPlanButtonLogo.png",
     priceText: "4,400 円／月",
     chips: ["請求書作成機能", "入金管理機能", "スマホアプリ"],
   },
