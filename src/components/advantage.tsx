@@ -38,7 +38,13 @@ export default () => {
 
   const sliderWrapper = css({
     display: "none",
-    [mq[0]]: { display: "block", width: "380px", margin: "0 auto" },
+    [mq[0]]: {
+      display: "block",
+      width: "380px",
+      margin: "0 auto",
+    },
+
+
     ".swiper-button-next": {
       content: `url(${ArrowImage})`,
       backgroundColor: "gray",
@@ -84,9 +90,8 @@ export default () => {
           pagination={{ clickable: true }}
         >
           {benefitData.map((data, index) => (
-            <SwiperSlide>
+            <SwiperSlide key={index}>
               <AdvantageCard
-                key={index}
                 title={data.title}
                 chips={data.chips}
                 img={data.image}

@@ -10,6 +10,7 @@ import Detail from "../components/detail"
 import QandA from "../components/qandA"
 import Price from "../components/price"
 import HowToPay from "../components/howToPay"
+import Announcements from "../components/announcements"
 
 // const global = css`
 //   html {
@@ -46,6 +47,7 @@ export default function Home() {
         <QandA />
         <Price />
         <HowToPay />
+        <Announcements />
       </Layout>
     </>
   )
