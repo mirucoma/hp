@@ -27,11 +27,17 @@ export default () => {
   }
 
   const getAnnouncements = () => {
-    axios
-      .post(
-        "https://bzo3et1tzb.execute-api.ap-northeast-1.amazonaws.com/default/mirucoma-notion"
-        // { sorts: [{ property: "日付", direction: "descending" }], page_size: 5 }
-      )
+    axios({
+      method: "POST",
+      url: "https://bzo3et1tzb.execute-api.ap-northeast-1.amazonaws.com/default/mirucoma-notion",
+      data: {
+        sorts: [{ property: "日付", direction: "descending" }],
+        page_size: 5,
+      },
+      headers: {
+        "Content-Type": "text/plain",
+      },
+    })
       .then(res => {
         let result: announcements = []
         res.data.map((data: any) => {
