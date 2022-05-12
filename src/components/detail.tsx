@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState,useEffect } from "react"
 import { css } from "@emotion/react"
 import color from "../styles/color"
 import mq from "../styles/mediaQuery"
@@ -20,8 +20,11 @@ export default () => {
 
   const handleChangeActive = (index: number) => {
     setActiveDetailSlide(index)
-    swiper?.slideTo(0, 500)
   }
+
+  useEffect(() => {
+    swiper?.slideTo(0, 500)
+  },[activeDetailSlide])
 
   const detailWrapper = css({
     backgroundColor: color.primary.light,
