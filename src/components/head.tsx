@@ -1,4 +1,5 @@
 import Helmet from "react-helmet"
+import { withPrefix } from "gatsby"
 
 type headProps = {
   title: string
@@ -13,7 +14,7 @@ export default (props: headProps) => {
         lang: "ja",
       }}
       link={[
-        { rel: "icon", href: "/favicon.ico" },
+        { rel: "icon", href: withPrefix("/favicon.ico") },
       ]}
       title={title}
       meta={[
