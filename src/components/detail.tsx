@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from "react"
+import React, { useState, useEffect } from "react"
 import { css } from "@emotion/react"
 import color from "../styles/color"
 import mq from "../styles/mediaQuery"
@@ -24,7 +24,7 @@ export default () => {
 
   useEffect(() => {
     swiper?.slideTo(0, 500)
-  },[activeDetailSlide])
+  }, [activeDetailSlide])
 
   const detailWrapper = css({
     backgroundColor: color.primary.light,
@@ -98,6 +98,9 @@ export default () => {
       "rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px",
     [mq[0]]: {
       width: "100%",
+      padding: "0px",
+      backgroundColor: "transparent",
+      boxShadow: "none",
     },
   })
 
@@ -105,6 +108,8 @@ export default () => {
     width: "100%",
     maxWidth: "100%",
     height: "auto",
+    border: "1px solid gray",
+    [mq[0]]:{ width: "93%", margin: "0 auto"}
   })
 
   const slideTextWrapper = css({
@@ -112,6 +117,19 @@ export default () => {
     textAlign: "left",
     paddingBottom: "24px",
     borderBottom: "1px dashed rgba(0, 0, 0, 0.12)",
+
+    [mq[0]]: {
+      p: { fontSize: "1rem" },
+      backgroundColor: "white",
+      borderRadius: "16px",
+      padding: "8px",
+      boxShadow:
+      "rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px",
+      border: "none",
+      width: "93%",
+      margin: "0 auto",
+      marginTop: "16px",
+    },
   })
 
   const slideTitle = css({

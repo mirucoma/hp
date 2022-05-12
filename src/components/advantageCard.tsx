@@ -30,7 +30,7 @@ export default (props: advantageCardProps) => {
     boxShadow:
       "0px 0px 2px rgba(0, 0, 0, 0.14), 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 3px rgba(0, 0, 0, 0.2)",
     textAlign: "center",
-    width: "380px",
+    maxWidth: "380px",
     borderRadius: "8px",
   })
 
@@ -59,10 +59,11 @@ export default (props: advantageCardProps) => {
   })
 
   const cardImage = css({
-    display: "inline-block",
-    textAlign: "center",
+    width: "100%",
+    maxWidth: "100%",
+    height: "auto",
+    [mq[0]]:{ width: "93%", margin: "0 auto"}
   })
-
   const pointList = css({
     padding: "16px",
     paddingTop: "24px",
@@ -84,7 +85,7 @@ export default (props: advantageCardProps) => {
     display: "inline-block",
     marginBottom: "16px",
     marginRight: "16px",
-    cursor: "pointer"
+    cursor: "pointer",
   })
 
   return (
@@ -99,7 +100,7 @@ export default (props: advantageCardProps) => {
         ))}
       </div>
 
-      {Img}
+      <div css={cardImage}>{Img}</div>
 
       <ul css={pointList}>
         {points.map((text, index) => (

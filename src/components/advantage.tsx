@@ -16,10 +16,12 @@ import "swiper/css/pagination"
 
 export default () => {
 
+
   const advantageTitleWrapper = css({
     width: "100%",
     textAlign: "center",
     backgroundColor: color.primary.light,
+    padding: "16px"
   })
 
   const advantageTitle = css({
@@ -33,7 +35,7 @@ export default () => {
     gap: "40px",
     flexWrap: "wrap",
     width: "100%",
-    [mq[0]]: { display: "none" },
+    [mq[0]]: { display: "none", width: "94%",},
     padding: "24px 0",
   })
 
@@ -41,7 +43,7 @@ export default () => {
     display: "none",
     [mq[0]]: {
       display: "block",
-      width: "380px",
+      maxWidth: "380px",
       margin: "0 auto",
     },
 
@@ -81,7 +83,6 @@ export default () => {
             />
           ))}
         </div>
-
         <Swiper
           css={sliderWrapper}
           modules={[Navigation, Pagination]}
