@@ -84,6 +84,7 @@ export default (props: advantageCardProps) => {
     display: "inline-block",
     marginBottom: "16px",
     marginRight: "16px",
+    cursor: "pointer"
   })
 
   return (
