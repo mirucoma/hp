@@ -9,12 +9,17 @@ import { Swiper as SwiperType } from "swiper/types"
 
 import { plans, slideData } from "../datas/content"
 
+import useDetailActiveSlide from "../hooks/DetailActiveSlide/useDetailActiveSlide"
+import useScrollToDetailSlide from "../hooks/ScrollToDetailSlide/useScrollToDetailSlide"
+
 export default () => {
   const [swiper, setSwiper] = useState<SwiperType>()
-  const [active, setActive] = useState<number>(0)
+  const { activeDetailSlide, setActiveDetailSlide } = useDetailActiveSlide()
+
+  const { targetRef } = useScrollToDetailSlide()
 
   const handleChangeActive = (index: number) => {
-    setActive(index)
+    setActiveDetailSlide(index)
     swiper?.slideTo(0, 500)
   }
 
@@ -137,14 +142,14 @@ export default () => {
 
   return (
     <>
-      <div css={detailWrapper}>
+      <div ref={targetRef} css={detailWrapper}>
         <p css={detailTitle}>機能紹介</p>
         <div css={detailBody}>
           <div css={list}>
             <ul>
               {plans.map((key: string, index: number) => (
                 <li
-                  css={index == active ? activePlan : ""}
+                  css={index == activeDetailSlide ? activePlan : ""}
                   onClick={() => handleChangeActive(index)}
                   key={index}
                 >
@@ -166,9 +171,9 @@ export default () => {
               pagination={{ clickable: true }}
               onSwiper={data => setSwiper(data)}
             >
-              {slideData[active].map((data, index) => (
+              {slideData[activeDetailSlide].map((data, index) => (
                 <SwiperSlide key={index}>
-                  <img css={slideImage} src={data.image} alt="" />
+                  <div css={slideImage}>{data.image}</div>
 
                   <div css={slideTextWrapper}>
                     <p css={slideTitle}>{data.title}</p>

@@ -15,6 +15,7 @@ import "swiper/css/navigation"
 import "swiper/css/pagination"
 
 export default () => {
+
   const advantageTitleWrapper = css({
     width: "100%",
     textAlign: "center",
@@ -33,7 +34,7 @@ export default () => {
     flexWrap: "wrap",
     width: "100%",
     [mq[0]]: { display: "none" },
-    padding: "56px 0",
+    padding: "24px 0",
   })
 
   const sliderWrapper = css({
@@ -43,7 +44,6 @@ export default () => {
       width: "380px",
       margin: "0 auto",
     },
-
 
     ".swiper-button-next": {
       content: `url(${ArrowImage})`,
@@ -68,14 +68,15 @@ export default () => {
   return (
     <>
       <div css={advantageTitleWrapper}>
-        <p css={advantageTitle}>ああああああああああああああああああああ</p>
+        <p css={advantageTitle}>ミルコマのメリット</p>
         <div css={cardWrapper}>
           {benefitData.map((data, index) => (
             <AdvantageCard
               key={index}
+              planId={index}
               title={data.title}
               chips={data.chips}
-              img={data.image}
+              Img={data.image}
               points={data.points}
             />
           ))}
@@ -92,9 +93,10 @@ export default () => {
           {benefitData.map((data, index) => (
             <SwiperSlide key={index}>
               <AdvantageCard
+                planId={index}
                 title={data.title}
                 chips={data.chips}
-                img={data.image}
+                Img={data.image}
                 points={data.points}
               />
             </SwiperSlide>

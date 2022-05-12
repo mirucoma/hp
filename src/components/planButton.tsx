@@ -2,16 +2,17 @@ import React, { useState } from "react"
 import { css } from "@emotion/react"
 import color from "../styles/color"
 import mq from "../styles/mediaQuery"
+import { StaticImage } from "gatsby-plugin-image"
 
 export type planButtonProps = {
   title: string
-  image: string
+  Img: JSX.Element
   priceText: string
   chips: string[]
 }
 
 export default (props: planButtonProps) => {
-  const { title, image, priceText, chips } = props
+  const { title, Img, priceText, chips } = props
   const [active, setActive] = useState(false)
 
   const switchActive = () => {
@@ -71,21 +72,23 @@ export default (props: planButtonProps) => {
   return (
     <span css={planButtonWrapper} onClick={switchActive}>
       {active ? (
-        <img
+        <StaticImage
           css={{ width: "16px", height: "16px", margin: "8px" }}
-          src="../images/select.png"
+          src="../../static/images/select.png"
           alt=""
         />
       ) : (
-        <img
+        <StaticImage
           css={{ width: "16px", height: "16px", margin: "8px" }}
-          src="../images/disableSelect.png"
+          src="../../static/images/disableSelect.png"
           alt=""
         />
       )}
       <div css={display}>
         <p css={planTitle}>{title}</p>
-        <img css={logo} src={image} alt="" />
+        <div css={logo}>
+          {Img}
+        </div>
         <hr css={planButtonHr} />
         <p css={planTitle}>{priceText}</p>
         <div css={gapFlex}>

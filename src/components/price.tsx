@@ -259,7 +259,7 @@ export default () => {
                 <PlanButton
                   key={index}
                   title={data.title}
-                  image={data.image}
+                  Img={data.image}
                   priceText={data.priceText}
                   chips={data.chips}
                 />

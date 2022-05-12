@@ -12,43 +12,39 @@ import Price from "../components/price"
 import HowToPay from "../components/howToPay"
 import Announcements from "../components/announcements"
 
-// const global = css`
-//   html {
-//     font-size: 50%;
-//   }
-
-//   * {
-//     margin: 0;
-//     padding: 0;
-//   }
-// `
+import DetailActiveSlideProvider from "../hooks/DetailActiveSlide/detailActiveSlideProvider"
+import ScrollToDetailSlideContext from "../hooks/ScrollToDetailSlide/ScrollToDetailSlideProvider"
 
 const global = css({
-  html:{
-    fontSize: "50%"
-  }, 
+  html: {
+    fontSize: "50%",
+  },
   "*": {
-  margin: "0",
-  padding: "0",
-},
+    margin: "0",
+    padding: "0",
+  },
 })
 
 export default function Home() {
   return (
     <>
-    <Global styles={global}/>
-      <Layout>
-        <Benefit />
-        <Concept />
-        <Advantage />
-        <Problem />
-        <CustomerVoice />
-        <Detail />
-        <QandA />
-        <Price />
-        <HowToPay />
-        <Announcements />
-      </Layout>
+      <Global styles={global} />
+      <DetailActiveSlideProvider>
+        <ScrollToDetailSlideContext>
+          <Layout>
+            <Benefit />
+            <Concept />
+            <Advantage />
+            <Problem />
+            <CustomerVoice />
+            <Detail />
+            <QandA />
+            <Price />
+            <HowToPay />
+            <Announcements />
+          </Layout>
+        </ScrollToDetailSlideContext>
+      </DetailActiveSlideProvider>
     </>
   )
 }

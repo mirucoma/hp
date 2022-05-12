@@ -1,13 +1,13 @@
 type benefitDataType = Array<{
   title: string
   chips: string[]
-  image: string
+  image: JSX.Element
   points: string[]
 }>
 
 type slideDataType = {
   [key: number]: Array<{
-    image: string
+    image: JSX.Element
     title: string
     detail: string
   }>
@@ -15,7 +15,7 @@ type slideDataType = {
 
 type planButtonDataType = Array<{
   title: string
-  image: string
+  image: JSX.Element
   priceText: string
   chips: string[]
 }>

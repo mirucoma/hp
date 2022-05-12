@@ -3,23 +3,35 @@ import { css } from "@emotion/react"
 import color from "../styles/color"
 import mq from "../styles/mediaQuery"
 
+import useDetailActiveSlide from "../hooks/DetailActiveSlide/useDetailActiveSlide"
+import useScrollToDetailSlide from "../hooks/ScrollToDetailSlide/useScrollToDetailSlide"
+
 export type advantageCardProps = {
+  planId: number
   title: string
   chips: string[]
-  img: string
+  Img: JSX.Element
   points: string[]
 }
 
 export default (props: advantageCardProps) => {
-  const { title, chips, img, points } = props
+  const { planId, title, chips, Img, points } = props
+  const { setActiveDetailSlide } = useDetailActiveSlide()
+
+  const { scrollToDetailSlide } = useScrollToDetailSlide()
+
+  const jumpToDetailSlide = () => {
+    setActiveDetailSlide(planId)
+    scrollToDetailSlide()
+  }
 
   const cardWrapper = css({
     backgroundColor: "white",
     boxShadow:
       "0px 0px 2px rgba(0, 0, 0, 0.14), 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 3px rgba(0, 0, 0, 0.2)",
     textAlign: "center",
-    width: "380px", 
-    borderRadius: "8px"
+    width: "380px",
+    borderRadius: "8px",
   })
 
   const cardTitle = css({
@@ -48,7 +60,7 @@ export default (props: advantageCardProps) => {
 
   const cardImage = css({
     display: "inline-block",
-    textAlign: "center"
+    textAlign: "center",
   })
 
   const pointList = css({
@@ -86,7 +98,7 @@ export default (props: advantageCardProps) => {
         ))}
       </div>
 
-      <img css={cardImage} src={img} alt="" />
+      {Img}
 
       <ul css={pointList}>
         {points.map((text, index) => (
@@ -95,7 +107,9 @@ export default (props: advantageCardProps) => {
       </ul>
 
       <div css={detailWrapper}>
-        <p css={detailLink}>詳細 →</p>
+        <p css={detailLink} onClick={() => jumpToDetailSlide()}>
+          詳細 →
+        </p>
       </div>
     </div>
   )
