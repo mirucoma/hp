@@ -11,6 +11,7 @@ import QandA from "../components/qandA"
 import Price from "../components/price"
 import HowToPay from "../components/howToPay"
 import Announcements from "../components/announcements"
+import Footer from "../components/footer"
 
 import DetailActiveSlideProvider from "../hooks/DetailActiveSlide/detailActiveSlideProvider"
 import ScrollToDetailSlideContext from "../hooks/ScrollToDetailSlide/ScrollToDetailSlideProvider"
@@ -42,6 +43,7 @@ export default function Home() {
             <Price />
             <HowToPay />
             <Announcements />
+            <Footer />
           </Layout>
         </ScrollToDetailSlideContext>
       </DetailActiveSlideProvider>
