@@ -37,8 +37,7 @@ export default () => {
     boxShadow:
       "rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px",
     padding: "16px 24px",
-
-    [mq[0]]: { width: "88%" },
+    [mq[2]]: { width: "88%" },
   })
 
   const centerFlex = css({
@@ -61,17 +60,20 @@ export default () => {
     fontSize: "3rem",
     width: "80%",
 
+    [mq[3]]: { fontSize: "2.5rem"},
     [mq[0]]: { fontSize: "1.7rem" },
   })
 
   const boldText = css({
     fontSize: "4rem",
     color: color.primary.main,
+    [mq[3]]: {fontSize : "3.6rem"},
     [mq[0]]: { fontSize: "1.9rem" },
   })
 
   const shiftText = css({
     paddingLeft: "176px",
+    [mq[3]]: { paddingLeft: "120px"},
     [mq[0]]: { paddingLeft: "32px" },
   })
 

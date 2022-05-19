@@ -24,6 +24,7 @@ export default () => {
   const popText = css({
     fontSize: "8rem",
     fontWeight: "700",
+    [mq[3]]: {fontSize: "6.6rem"},
     [mq[0]] : {fontSize: "5rem"},
     color: "white",
   })
@@ -47,7 +48,7 @@ export default () => {
   })
 
   const vector = css({
-    width: "56%",
+    width: "53%",
     height: "600px",
     borderRadius: "63% 37% 63% 37% / 48% 51% 49% 52% ",
     backgroundColor: "white",

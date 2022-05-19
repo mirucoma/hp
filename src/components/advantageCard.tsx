@@ -68,6 +68,7 @@ export default (props: advantageCardProps) => {
     padding: "16px",
     paddingTop: "24px",
     textAlign: "left",
+    marginLeft: "24px",
     li: {
       fontSize: "2rem",
     },

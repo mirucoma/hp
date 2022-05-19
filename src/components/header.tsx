@@ -21,9 +21,11 @@ export default () => {
   })
 
   const logoImage = css({
-    width: "120px",
+    width: "160px",
+    height: "auto",
     objectFit: "contain",
-    [mq[0]]: { width: "50%" },
+    margin: "16px 32px",
+   [mq[0]]: { margin: "12px 16px" },
   })
 
   const subtitled = css({
@@ -50,11 +52,12 @@ export default () => {
     <>
       <header>
         <div css={barWrap}>
+          <div css={logoImage}>
           <StaticImage
-            css={logoImage}
             src="../../static/images/logo.png"
             alt=""
           />
+          </div>
           <div css={content}>
             <p css={subtitled}>プラン紹介</p>
             <p css={subtitled}>利用料金</p>
