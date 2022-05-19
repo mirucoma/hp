@@ -7,7 +7,10 @@ import PlanButton from "./planButton"
 
 import { planButtonData, plans } from "../datas/content"
 
+import useHomepageScrollStore from "../hooks/HomepageScrollStore/useHomepageScrollStore"
+
 export default () => {
+  const { priceRef } = useHomepageScrollStore()
   const Wrapper = css({
     fontSize: "1.7rem",
     paddingTop: "80px",
@@ -31,6 +34,7 @@ export default () => {
 
   const shadowBox = css({
     width: "56%",
+    maxWidth: "864px",
     margin: "0 auto",
     backgroundColor: "white",
     borderRadius: "8px",
@@ -60,20 +64,20 @@ export default () => {
     fontSize: "3rem",
     width: "80%",
 
-    [mq[3]]: { fontSize: "2.5rem"},
+    [mq[3]]: { fontSize: "2.5rem" },
     [mq[0]]: { fontSize: "1.7rem" },
   })
 
   const boldText = css({
     fontSize: "4rem",
     color: color.primary.main,
-    [mq[3]]: {fontSize : "3.6rem"},
+    [mq[3]]: { fontSize: "3.6rem" },
     [mq[0]]: { fontSize: "1.9rem" },
   })
 
   const shiftText = css({
     paddingLeft: "176px",
-    [mq[3]]: { paddingLeft: "120px"},
+    [mq[3]]: { paddingLeft: "120px" },
     [mq[0]]: { paddingLeft: "32px" },
   })
 
@@ -107,7 +111,7 @@ export default () => {
 
   const warnText = css({
     color: "gray",
-    [mq[0]]: { fontSize: "1rem"}
+    [mq[0]]: { fontSize: "1rem" },
   })
 
   const customDivider = css({
@@ -124,14 +128,14 @@ export default () => {
     padding: "24px",
     objectFit: "cover",
 
-    [mq[0]]:{padding: "13px", top: "-25px",}
+    [mq[0]]: { padding: "13px", top: "-25px" },
   })
 
   const dividerImage = css({
     width: "30px",
     height: "30px",
 
-    [mq[0]]:{width: "21px", height: "21px"}
+    [mq[0]]: { width: "21px", height: "21px" },
   })
 
   const secondBodyWrapper = css({
@@ -140,14 +144,14 @@ export default () => {
     paddingBottom: "24px",
     backgroundColor: "white",
 
-    [mq[0]]:{paddingTop: "40px"}
+    [mq[0]]: { paddingTop: "40px" },
   })
 
   const secondBodyTitle = css({
     fontSize: "3rem",
     color: color.primary.main,
 
-    [mq[0]]:{fontSize: "2rem"}
+    [mq[0]]: { fontSize: "2rem" },
   })
 
   const planButtonWrapper = css({
@@ -164,7 +168,7 @@ export default () => {
       borderRadius: "8px",
     },
 
-    [mq[0]]:{width: "96%"}
+    [mq[0]]: { width: "96%" },
   })
 
   const planButtonField = css({
@@ -177,7 +181,7 @@ export default () => {
 
   return (
     <>
-      <div css={Wrapper}>
+      <div ref={priceRef} css={Wrapper}>
         <div css={topicWrapper}>
           <h3 css={topicText}>利用料金</h3>
         </div>

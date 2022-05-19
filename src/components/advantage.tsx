@@ -11,17 +11,18 @@ import AdvantageCard from "./advantageCard"
 
 import { benefitData } from "../datas/content"
 
+import useHomepageScrollStore from "../hooks/HomepageScrollStore/useHomepageScrollStore"
+
 import "swiper/css/navigation"
 import "swiper/css/pagination"
 
 export default () => {
-
-
+  const { advantageRef } = useHomepageScrollStore()
   const advantageTitleWrapper = css({
     width: "100%",
     textAlign: "center",
     backgroundColor: color.primary.light,
-    padding: "16px"
+    padding: "16px",
   })
 
   const advantageTitle = css({
@@ -35,7 +36,7 @@ export default () => {
     gap: "40px",
     flexWrap: "wrap",
     width: "100%",
-    [mq[0]]: { display: "none", width: "94%",},
+    [mq[0]]: { display: "none", width: "94%" },
     padding: "24px 0",
   })
 
@@ -69,7 +70,7 @@ export default () => {
 
   return (
     <>
-      <div css={advantageTitleWrapper}>
+      <div ref={advantageRef} css={advantageTitleWrapper}>
         <p css={advantageTitle}>ミルコマのメリット</p>
         <div css={cardWrapper}>
           {benefitData.map((data, index) => (

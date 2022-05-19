@@ -6,6 +6,8 @@ import DownArrowImage from "../../static/images/down-arrow.png"
 import UpArrowImage from "../../static/images/up-arrow.png"
 import QandABackgroundImage from "../../static/images/qandaBg.png"
 
+import useHomepageScrollStore from "../hooks/HomepageScrollStore/useHomepageScrollStore"
+
 type QandA = {
   question: string
   answer: string
@@ -23,6 +25,7 @@ const questions: Array<QandA> = [
 ]
 
 export default () => {
+  const { qandARef } = useHomepageScrollStore()
   const Wrapper = css({
     fontSize: "1.7rem",
     marginTop: "80px",
@@ -111,7 +114,7 @@ export default () => {
 
   return (
     <>
-      <div css={Wrapper}>
+      <div ref={qandARef} css={Wrapper}>
         <div css={topicWrapper}>
           <h3 css={topicText}>Q&A</h3>
         </div>

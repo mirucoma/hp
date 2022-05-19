@@ -5,7 +5,16 @@ import mq from "../styles/mediaQuery"
 import { StaticImage } from "gatsby-plugin-image"
 import { Link } from "gatsby"
 
+import useHomepageScrollStore from "../hooks/HomepageScrollStore/useHomepageScrollStore"
+
 export default () => {
+
+  const { advantageRef,priceRef,qandARef,announcementRef,scrollToRef } = useHomepageScrollStore()
+  const refList = [advantageRef,priceRef,qandARef,announcementRef]
+
+  const jumpToNavigation = (index:number) => {
+    scrollToRef(refList[index])
+  }
   const barWrap = css({
     display: "flex",
     backgroundColor: color.primary.main,
@@ -32,6 +41,7 @@ export default () => {
     color: "white",
     padding: "24px 0",
     fontSize: "2rem",
+    cursor: "pointer",
   })
 
   const loginButton = css({
@@ -59,10 +69,10 @@ export default () => {
           />
           </div>
           <div css={content}>
-            <p css={subtitled}>プラン紹介</p>
-            <p css={subtitled}>利用料金</p>
-            <p css={subtitled}>お問合せ</p>
-            <p css={subtitled}>お知らせ</p>
+            <p onClick={() => jumpToNavigation(0)} css={subtitled}>プラン紹介</p>
+            <p onClick={() => jumpToNavigation(1)} css={subtitled}>利用料金</p>
+            <p onClick={() => jumpToNavigation(2)} css={subtitled}>お問い合わせ</p>
+            <p onClick={() => jumpToNavigation(3)} css={subtitled}>お知らせ</p>
             <div>
               <div css={loginButton}>
                 <StaticImage css={{width: "20px", height: "18px"}} src={"../../static/images/join-logo.png"} alt={""} />

@@ -4,7 +4,7 @@ import color from "../styles/color"
 import mq from "../styles/mediaQuery"
 
 import useDetailActiveSlide from "../hooks/DetailActiveSlide/useDetailActiveSlide"
-import useScrollToDetailSlide from "../hooks/ScrollToDetailSlide/useScrollToDetailSlide"
+import useHomepageScrollStore from "../hooks/HomepageScrollStore/useHomepageScrollStore"
 
 export type advantageCardProps = {
   planId: number
@@ -18,11 +18,11 @@ export default (props: advantageCardProps) => {
   const { planId, title, chips, Img, points } = props
   const { setActiveDetailSlide } = useDetailActiveSlide()
 
-  const { scrollToDetailSlide } = useScrollToDetailSlide()
+  const { detailRef,scrollToRef } = useHomepageScrollStore()
 
   const jumpToDetailSlide = () => {
     setActiveDetailSlide(planId)
-    scrollToDetailSlide()
+    scrollToRef(detailRef)
   }
 
   const cardWrapper = css({

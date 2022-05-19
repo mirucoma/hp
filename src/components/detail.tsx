@@ -10,13 +10,13 @@ import { Swiper as SwiperType } from "swiper/types"
 import { plans, slideData } from "../datas/content"
 
 import useDetailActiveSlide from "../hooks/DetailActiveSlide/useDetailActiveSlide"
-import useScrollToDetailSlide from "../hooks/ScrollToDetailSlide/useScrollToDetailSlide"
+import useHomepageScrollStore from "../hooks/HomepageScrollStore/useHomepageScrollStore"
 
 export default () => {
   const [swiper, setSwiper] = useState<SwiperType>()
   const { activeDetailSlide, setActiveDetailSlide } = useDetailActiveSlide()
 
-  const { targetRef } = useScrollToDetailSlide()
+  const { detailRef } = useHomepageScrollStore()
 
   const handleChangeActive = (index: number) => {
     setActiveDetailSlide(index)
@@ -165,7 +165,7 @@ export default () => {
 
   return (
     <>
-      <div ref={targetRef} css={detailWrapper}>
+      <div ref={detailRef} css={detailWrapper}>
         <p css={detailTitle}>機能紹介</p>
         <div css={detailBody}>
           <div css={list}>

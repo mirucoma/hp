@@ -14,7 +14,7 @@ import Announcements from "../components/announcements"
 import Footer from "../components/footer"
 
 import DetailActiveSlideProvider from "../hooks/DetailActiveSlide/detailActiveSlideProvider"
-import ScrollToDetailSlideContext from "../hooks/ScrollToDetailSlide/ScrollToDetailSlideProvider"
+import HomepageScrollStoreProvider from "../hooks/HomepageScrollStore/HomepageScrollStoreProvider"
 
 const global = css({
   html: {
@@ -31,7 +31,7 @@ export default function Home() {
     <>
       <Global styles={global} />
       <DetailActiveSlideProvider>
-        <ScrollToDetailSlideContext>
+        <HomepageScrollStoreProvider>
           <Layout>
             <Benefit />
             <Concept />
@@ -45,7 +45,7 @@ export default function Home() {
             <Announcements />
             <Footer />
           </Layout>
-        </ScrollToDetailSlideContext>
+        </HomepageScrollStoreProvider>
       </DetailActiveSlideProvider>
     </>
   )

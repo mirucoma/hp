@@ -7,8 +7,8 @@ import { StaticImage } from "gatsby-plugin-image"
 
 export default () => {
   const benefitWrapper = css({
+    height: "100vh",
     display: "flex",
-    height: "680px",
     [mq[0]]: {height: "228px"},
     justifyContent: "center",
     alignItems: "center",

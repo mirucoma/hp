@@ -2,15 +2,11 @@ import React, { useState, useEffect } from "react"
 import { css } from "@emotion/react"
 import color from "../styles/color"
 import mq from "../styles/mediaQuery"
-import Tab from "./tab"
+//import Tab from "./tab"
 import axios from "axios"
 
-// const MODE = {
-//   NEW: 0,
-//   MAINTENANCE: 1,
-// } as const;
+import useHomepageScrollStore from "../hooks/HomepageScrollStore/useHomepageScrollStore"
 
-// export type MODE = typeof MODE[keyof typeof MODE];
 
 type announcements = {
   date: string
@@ -18,13 +14,17 @@ type announcements = {
   url: string
 }[]
 
+// コメントアウト部分 タブにてお知らせ種別を切り替えるコード
+// 将来的に使用する可能性があるので、コメントアウトとする。
 export default () => {
-  const [activeNewAnnouncements, setNewActiveAnnouncements] = useState(true)
+  //const [activeNewAnnouncements, setNewActiveAnnouncements] = useState(true)
+  // const switchNewAnnouncementsActive = () => {
+  //   setNewActiveAnnouncements(prevActive => !prevActive)
+  // }
+
   const [announcements, setAnnouncements] = useState<announcements>([])
 
-  const switchNewAnnouncementsActive = () => {
-    setNewActiveAnnouncements(prevActive => !prevActive)
-  }
+  const { announcementRef } = useHomepageScrollStore()
 
   const getAnnouncements = () => {
     axios({
@@ -56,7 +56,7 @@ export default () => {
 
   useEffect(() => {
     getAnnouncements()
-  }, [activeNewAnnouncements])
+  }, [/*activeNewAnnouncements*/])
 
   const announcementsWrapper = css({
     marginTop: "72px",
@@ -99,11 +99,11 @@ export default () => {
 
   return (
     <>
-      <div css={announcementsWrapper}>
+      <div ref={announcementRef} css={announcementsWrapper}>
         <p css={topicText}>お知らせ</p>
 
         <div css={dataWrapper}>
-          <div css={tabField}>
+          {/* <div css={tabField}>
             <Tab
               title="新着情報"
               active={activeNewAnnouncements}
@@ -114,7 +114,7 @@ export default () => {
               active={!activeNewAnnouncements}
               onClick={() => switchNewAnnouncementsActive()}
             />
-          </div>
+          </div> */}
           {announcements.map((data, index) => (
             <a
               key={index}

@@ -18,6 +18,7 @@ export default () => {
 
   const payListWrapper = css({
     width: "64%",
+    maxWidth: "864px",
     textAlign: "center",
     margin: "0 auto",
     marginTop: "56px",
