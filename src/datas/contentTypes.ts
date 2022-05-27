@@ -13,6 +13,11 @@ type slideDataType = {
   }>
 }
 
+type QandA = {
+  question: string
+  answer: string
+}
+
 type planButtonDataType = Array<{
   title: string
   image: JSX.Element

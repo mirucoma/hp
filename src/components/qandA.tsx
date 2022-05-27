@@ -6,23 +6,9 @@ import DownArrowImage from "../../static/images/down-arrow.png"
 import UpArrowImage from "../../static/images/up-arrow.png"
 import QandABackgroundImage from "../../static/images/qandaBg.png"
 
+import { questions } from "../datas/content"
+
 import useHomepageScrollStore from "../hooks/HomepageScrollStore/useHomepageScrollStore"
-
-type QandA = {
-  question: string
-  answer: string
-}
-
-const questions: Array<QandA> = [
-  {
-    question: "初期費用は必要ですか？",
-    answer: "No!",
-  },
-  {
-    question: "個人情報の取り扱いはどうなっていますか？",
-    answer: "Text!",
-  },
-]
 
 export default () => {
   const { qandARef } = useHomepageScrollStore()
@@ -32,7 +18,12 @@ export default () => {
     "details > summary::after": {
       content: `url(${DownArrowImage})`,
       transform: "scale(0.7)",
-      [mq[0]]: { transform: "scale(0.5)", position: "absolute",right: "20px",top: "16px" },
+      [mq[0]]: {
+        transform: "scale(0.5)",
+        position: "absolute",
+        right: "20px",
+        top: "16px",
+      },
     },
     "details[open] > summary::after": {
       content: `url(${UpArrowImage})`,
@@ -99,7 +90,7 @@ export default () => {
 
   const questionText = css({
     display: "inline-block",
-    width: "90%",
+    width: "78%",
   })
 
   const answerWrapper = css({

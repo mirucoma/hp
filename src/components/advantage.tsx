@@ -71,7 +71,7 @@ export default () => {
   return (
     <>
       <div ref={advantageRef} css={advantageTitleWrapper}>
-        <p css={advantageTitle}>ミルコマのメリット</p>
+        <p css={advantageTitle}>ご負担の少ない価格で<br />これらの機能を提供しています。</p>
         <div css={cardWrapper}>
           {benefitData.map((data, index) => (
             <AdvantageCard
