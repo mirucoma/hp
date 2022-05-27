@@ -5,58 +5,18 @@ import mq from "../styles/mediaQuery"
 //import Tab from "./tab"
 import axios from "axios"
 
+import { useAnnouncementSwr } from "../fetch/useAnnouncementSwr"
 import useHomepageScrollStore from "../hooks/HomepageScrollStore/useHomepageScrollStore"
-
-
-type announcements = {
-  date: string
-  title: string
-  url: string
-}[]
 
 // コメントアウト部分 タブにてお知らせ種別を切り替えるコード
 // 将来的に使用する可能性があるので、コメントアウトとする。
 export default () => {
-  //const [activeNewAnnouncements, setNewActiveAnnouncements] = useState(true)
   // const switchNewAnnouncementsActive = () => {
   //   setNewActiveAnnouncements(prevActive => !prevActive)
   // }
 
-  const [announcements, setAnnouncements] = useState<announcements>([])
-
+  const { data, error } = useAnnouncementSwr()
   const { announcementRef } = useHomepageScrollStore()
-
-  const getAnnouncements = () => {
-    axios({
-      method: "POST",
-      url: "https://bzo3et1tzb.execute-api.ap-northeast-1.amazonaws.com/default/mirucoma-notion",
-      data: {
-        sorts: [{ property: "日付", direction: "descending" }],
-        page_size: 5,
-      },
-      headers: {
-        "Content-Type": "text/plain",
-      },
-    })
-      .then(res => {
-        let result: announcements = []
-        res.data.map((data: any) => {
-          result.push({
-            date: data.date,
-            title: data.title,
-            url: data.url,
-          })
-        })
-        setAnnouncements(result)
-      })
-      .catch(err => {
-        console.log(err)
-      })
-  }
-
-  useEffect(() => {
-    getAnnouncements()
-  }, [/*activeNewAnnouncements*/])
 
   const announcementsWrapper = css({
     marginTop: "72px",
@@ -115,7 +75,7 @@ export default () => {
               onClick={() => switchNewAnnouncementsActive()}
             />
           </div> */}
-          {announcements.map((data, index) => (
+          {data?.map((data, index) => (
             <a
               key={index}
               css={{ textDecoration: "none", color: "black" }}

@@ -17,11 +17,19 @@ export default () => {
     justifyContent: "center",
     gap: "48px",
 
+    "a":{
+      color: "#797979"
+    },
+
+    "a:hover":{
+      textDecoration: "none"
+    },
+
     [mq[0]]: {
       flexDirection: "column",
       textAlign: "center",
       gap: "0px",
-      p: { borderBottom: "1px solid rgba(0, 0, 0, 0.12);",padding: "16px" },
+      p: { borderBottom: "1px solid rgba(0, 0, 0, 0.12);", padding: "16px" },
     },
   })
 
@@ -33,11 +41,21 @@ export default () => {
     <>
       <div css={footerWrapper}>
         <div css={field}>
-          <p>利用規約</p>
-          <p>プライバシーポリシー</p>
-          <p>特定商取引法に基づく表記</p>
-          <p>運営会社</p>
-          <p>お問合せ</p>
+          <a href="https://mirucoma.jp/user-policy.html">
+            <p>利用規約</p>
+          </a>
+          <a href="https://mirucoma.jp/privacy-policy.html">
+            <p>プライバシーポリシー</p>
+          </a>
+          <a href="https://mirucoma.jp/terms-of-sale.html">
+            <p>特定商取引法に基づく表記</p>
+          </a>
+          <a href="https://mirucoma.jp/company.html">
+            <p>運営会社</p>
+          </a>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdTRSPZJ9PS5lAXBJTui5n_25DscUlz09jy333w1GcrFkLWvg/viewform">
+            <p>お問い合わせ</p>
+          </a>
         </div>
         <p css={bottomText}>
           ©2022 Lagoon Corporation, inc. Icon made by Font Awesome is licensed

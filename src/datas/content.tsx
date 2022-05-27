@@ -89,19 +89,19 @@ export const planButtonData: planButtonDataType = [
   {
     title: "入退室管理プラン",
     image: <StaticImage src="../../static/images/joinPlanButtonLogo.png" alt={""} />,
-    priceText: "1,100 円／月",
+    priceText: "1,100 円／月 (税込)",
     chips: ["入退室機能", "スマホアプリ"],
   },
   {
     title: "メッセージ管理プラン",
     image: <StaticImage src="../../static/images/messagePlanButtonLogo.png" alt={""} />,
-    priceText: "4,400 円／月",
+    priceText: "4,400 円／月 (税込)",
     chips: ["メッセージ機能", "お知らせ機能", "スマホアプリ"],
   },
   {
     title: "請求書管理プラン",
     image: <StaticImage src="../../static/images/billPlanButtonLogo.png" alt={""} />,
-    priceText: "4,400 円／月",
+    priceText: "4,400 円／月 (税込)",
     chips: ["請求書作成機能", "入金管理機能", "スマホアプリ"],
   },
 ]

@@ -9,7 +9,7 @@ export default () => {
   const benefitWrapper = css({
     height: "100vh",
     display: "flex",
-    [mq[0]]: {height: "228px"},
+    [mq[0]]: { height: "228px" },
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: color.primary.main,
@@ -18,21 +18,21 @@ export default () => {
   })
 
   const popWrapper = css({
-    marginLeft: "16px"
+    marginLeft: "16px",
   })
 
   const popText = css({
     fontSize: "8rem",
     fontWeight: "700",
-    [mq[3]]: {fontSize: "6.6rem"},
-    [mq[0]] : {fontSize: "5rem"},
+    [mq[3]]: { fontSize: "6.6rem" },
+    [mq[0]]: { fontSize: "5rem" },
     color: "white",
   })
 
   const subText = css({
     color: "white",
     fontSize: "1.8rem",
-    marginTop: 6
+    marginTop: 6,
   })
 
   const startButton = css({
@@ -44,7 +44,7 @@ export default () => {
     color: "white",
     marginTop: "56px",
 
-    [mq[0]]: { display: "none"},
+    [mq[0]]: { display: "none" },
   })
 
   const vector = css({
@@ -81,7 +81,9 @@ export default () => {
           <br />
           塾管理システムです。
         </p>
-        <button css={startButton}>今すぐ始める</button>
+        <a href="https://app.mirucoma.jp/register">
+          <button css={startButton}>今すぐ始める</button>
+        </a>
       </div>
       <div css={vector}>
         <StaticImage
