@@ -33,7 +33,7 @@ export const benefitData: benefitDataType = [
   {
     title: "請求書プラン",
     chips: ["請求書機能", "スマホアプリ"],
-    image: <StaticImage src="https://placehold.jp/280x140.png" width={280} height={141} alt={""} />,
+    image: <StaticImage src="../../static/images/details/createInvoice.png" width={280} height={141} alt={""} />,
     points: [
       "保護者アプリへ請求書の明細を送信することで面倒な封入作業や郵送コストを０に。",
       "月謝管理機能はリスト表示で見やすく、請求金額の設定や細かい割引にも対応。",
@@ -78,22 +78,28 @@ export const slideData: slideDataType = [
       title: "お知らせ機能",
       detail: ` 休校や日程調整などの塾のお知らせを学校別や学年別など送りたい人だけに送ることができます。
       お手紙での連絡をミルコマのお知らせ機能にすることで手紙への労力や郵送代を削減。
-      
       お知らせへの返信はチャット内でやり取りができるので、
       日程調整などの話題に対して誰と何をどこまで話したかをすべて把握することが出来ます`,
     },
   ],
   [
     {
-      image: <StaticImage src="https://placehold.jp/880x443.png" alt={""} />,
-      title: "請求書履歴",
+      image: <StaticImage src="../../static/images/details/createInvoice.png" alt={""} />,
+      title: "請求書の作成",
       detail:
-        "入退室履歴では生徒1人1人の滞在時間の把握やいつ来ていたかがわかるので月謝の回数確認に重宝します。また、入退室の履歴を編集することができ、間違って入室や退室してしまった際には後から変更をすることができます。",
+        `保護者向けの毎月の請求書を簡単に請求書の作成と管理を行うことが出来ます。
+        さらにミルコマで作成した請求書はボタン一つで保護者アプリに送信できます。
+        請求書の郵送にかかる手間や経費を0にすることができます。
+        割引を細かく設定することができるので、複雑な料金設定にも対応できます。
+        作成した請求書はCSV出力でき、銀行のEBサービスへアップロードすることで
+        引き落とし額を入力する手間と手入力による金額の打ち間違いをなくすことが出来ます。`,
     },
     {
-      image: <StaticImage src="https://placehold.jp/880x443.png" alt={""} />,
-      title: "test",
-      detail: "test",
+      image: <StaticImage src="../../static/images/details/inMoneyManage.png" alt={""} />,
+      title: "入金管理（開発中）",
+      detail: `保護者からの入金状況を管理することができる機能です。
+集金状況の確認や保護者から請求情報についてお問合せがあった際に素早く対応することができるようになります。
+入金に過不足のあったお金を自動で繰越処理をする機能や請求書の一括入力に対応予定です。`,
     },
   ],
 ]
@@ -102,16 +108,23 @@ export const slideData: slideDataType = [
 export const questions: Array<QandA> = [
   {
     question: "料金体系はどのようになっていますか？",
-    answer: "No!",
+    answer: "一校舎につきに利用される機能の金額が加算されます。\nまた、利用料金・組み合わせて選べるプランでも詳細をご確認いただけます。",
+    detailLink: null
   },
   {
     question: `クラウドのセキュリティは大丈夫ですか？
     個人情報(名前、住所、成績)が盗まれないか`,
-    answer: "Text!",
+    answer: `ミルコマはAmazon Web Serviceを用いてクラウド運用しており、各システムは定期的なセキュリティアップデートを行っています。
+    
+    また、お客様のデータを保存しているデータベースはAES-256 暗号化アルゴリズムを使用して暗号化されています。
+    
+    データの転送時には、システム間を行き来するデータも暗号化がされています。`,
+    detailLink: "https://aws.amazon.com/jp/security/"
   },
   {
     question: `操作方法がわからない場合はどうすれば良いですか？`,
-    answer: "Text!",
+    answer: "ミルコマご利用ガイドをご覧いただき、それでも解決しない場合には、お問い合わせよりご連絡ください。!",
+    detailLink: null
   },
 ]
 

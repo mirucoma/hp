@@ -103,6 +103,18 @@ export default () => {
     [mq[0]]: { fontSize: "1.5rem" },
   })
 
+  const qandAButton = css({
+    fontSize: "1.6rem",
+    padding: "8px 16px",
+    border: "0px",
+    borderRadius: "4px",
+    backgroundColor: color.secondary,
+    color: "white",
+    marginTop: "16px",
+
+    [mq[0]]: { fontSize: "1.5rem" },
+  })
+
   return (
     <>
       <div ref={qandARef} css={Wrapper}>
@@ -118,6 +130,16 @@ export default () => {
             <div css={answerWrapper}>
               <span css={textAIcon}>A</span>
               <span css={answerText}>{data.answer}</span>
+              <br />
+              {data.detailLink != null ? (
+                <a
+                  href={data.detailLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <button css={qandAButton}>詳細を確認</button>
+                </a>
+              ) : null}
             </div>
           </details>
         ))}

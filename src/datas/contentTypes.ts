@@ -15,7 +15,8 @@ type slideDataType = {
 
 type QandA = {
   question: string
-  answer: string
+  answer: string, 
+  detailLink: string | null
 }
 
 type planButtonDataType = Array<{
