@@ -70,8 +70,8 @@ export default () => {
 
   const inVectorDeviceImage = css({
     position: "absolute",
-    bottom: "13%",
-    right: "32%",
+    bottom: "10%",
+    right: "25%",
     // opacity: "0.9",
   })
 
