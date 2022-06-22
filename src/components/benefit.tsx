@@ -71,10 +71,8 @@ export default () => {
   const inVectorDeviceImage = css({
     position: "absolute",
     bottom: "13%",
-    right: "27%",
+    right: "32%",
     // opacity: "0.9",
-
-    boxShadow: "0px 11px 15px 0px rgba(0, 0, 0, 0.2)",
   })
 
   return (
@@ -102,9 +100,8 @@ export default () => {
         />
         <StaticImage
           css={inVectorDeviceImage}
-          src="../../static/images/device.png"
+          src="../../static/images/mock.png"
           width={149}
-          height={300}
           alt=""
         />
       </div>

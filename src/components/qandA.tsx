@@ -10,6 +10,8 @@ import { questions } from "../datas/content"
 
 import useHomepageScrollStore from "../hooks/HomepageScrollStore/useHomepageScrollStore"
 
+import { Link } from "gatsby"
+
 export default () => {
   const { qandARef } = useHomepageScrollStore()
   const Wrapper = css({
@@ -115,6 +117,13 @@ export default () => {
     [mq[0]]: { fontSize: "1.5rem" },
   })
 
+  const morePageSpace = css({
+    textAlign: "right",
+    padding: "8px",
+    fontSize: "2rem",
+    fontWeight: "bold"
+  })
+
   return (
     <>
       <div ref={qandARef} css={Wrapper}>
@@ -143,6 +152,15 @@ export default () => {
             </div>
           </details>
         ))}
+        <div css={morePageSpace}>
+          <p>
+            さらにQ and Aを見るには
+            <Link to="https://www.notion.so/mirucoma/Q-A-v-2-43a12d61e64349f3aae9dd98208b4b11">
+              こちら
+            </Link>
+            をクリック。
+          </p>
+        </div>
       </div>
     </>
   )
