@@ -2,6 +2,7 @@ import React from "react"
 import { css } from "@emotion/react"
 import color from "../styles/color"
 import mq from "../styles/mediaQuery"
+import { Link } from "gatsby"
 
 export default () => {
   const footerWrapper = css({
@@ -17,12 +18,12 @@ export default () => {
     justifyContent: "center",
     gap: "48px",
 
-    "a":{
-      color: "#797979"
+    a: {
+      color: "#797979",
     },
 
-    "a:hover":{
-      textDecoration: "none"
+    "a:hover": {
+      textDecoration: "none",
     },
 
     [mq[0]]: {
@@ -41,18 +42,18 @@ export default () => {
     <>
       <div css={footerWrapper}>
         <div css={field}>
-          <a href="/user-policy">
+          <Link to="/user-policy">
             <p>利用規約</p>
-          </a>
-          <a href="/privacy-policy">
+          </Link>
+          <Link to="/privacy-policy">
             <p>プライバシーポリシー</p>
-          </a>
-          <a href="/terms-of-sale">
+          </Link>
+          <Link to="/terms-of-sale">
             <p>特定商取引法に基づく表記</p>
-          </a>
-          <a href="/company">
+          </Link>
+          <Link to="/company">
             <p>運営会社</p>
-          </a>
+          </Link>
           <a href="https://docs.google.com/forms/d/e/1FAIpQLSdTRSPZJ9PS5lAXBJTui5n_25DscUlz09jy333w1GcrFkLWvg/viewform">
             <p>お問い合わせ</p>
           </a>

@@ -63,7 +63,16 @@ export default () => {
     position: "absolute",
     top: "16%",
     left: "8%",
-    opacity: "0.9",
+    // opacity: "0.9",
+
+    boxShadow: "0px 11px 15px 0px rgba(0, 0, 0, 0.2)",
+  })
+
+  const inVectorDeviceImage = css({
+    position: "absolute",
+    bottom: "13%",
+    right: "27%",
+    // opacity: "0.9",
 
     boxShadow: "0px 11px 15px 0px rgba(0, 0, 0, 0.2)",
   })
@@ -88,7 +97,14 @@ export default () => {
       <div css={vector}>
         <StaticImage
           css={inVectorImage}
-          src="https://placehold.jp/800x400.png"
+          src="../../static/images/mainScreen.png"
+          alt=""
+        />
+        <StaticImage
+          css={inVectorDeviceImage}
+          src="../../static/images/device.png"
+          width={149}
+          height={300}
           alt=""
         />
       </div>
