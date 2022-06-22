@@ -1,8 +1,8 @@
 import axios from "axios"
-
+import {DateTime} from "luxon"
 
 type announcements = {
-  date: string
+  date: DateTime
   title: string
   url: string
 }[]
@@ -22,7 +22,7 @@ export const getAnnouncementFetcher = async(url: string) => {
   let result: announcements = []
   await responce.data.map((data: any) => {
     result.push({
-      date: data.date,
+      date: DateTime.fromISO(data.date),
       title: data.title,
       url: data.url,
     })

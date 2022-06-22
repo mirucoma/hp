@@ -82,7 +82,7 @@ export default () => {
               href={data.url}
             >
               <div css={dataField}>
-                <p css={dateText}>{data.date}</p>
+                <p css={dateText}>{data.date.toFormat("yyyy.MM.dd")}</p>
                 <p css={titleText}>{data.title}</p>
               </div>
             </a>
