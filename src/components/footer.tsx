@@ -41,16 +41,16 @@ export default () => {
     <>
       <div css={footerWrapper}>
         <div css={field}>
-          <a href="https://mirucoma.jp/user-policy.html">
+          <a href="/user-policy">
             <p>利用規約</p>
           </a>
-          <a href="https://mirucoma.jp/privacy-policy.html">
+          <a href="/privacy-policy">
             <p>プライバシーポリシー</p>
           </a>
-          <a href="https://mirucoma.jp/terms-of-sale.html">
+          <a href="/terms-of-sale">
             <p>特定商取引法に基づく表記</p>
           </a>
-          <a href="https://mirucoma.jp/company.html">
+          <a href="/company">
             <p>運営会社</p>
           </a>
           <a href="https://docs.google.com/forms/d/e/1FAIpQLSdTRSPZJ9PS5lAXBJTui5n_25DscUlz09jy333w1GcrFkLWvg/viewform">

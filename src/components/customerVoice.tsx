@@ -9,6 +9,7 @@ export default () => {
     textAlign: "center",
     marginTop: "48px",
     marginBottom: "120px",
+    [mq[1]]:{ marginBottom: "48px"}
   })
 
   const topicText = css({
@@ -46,11 +47,13 @@ export default () => {
             css={voiceCard}
             src={"../../static/images/customerVoice1.png"}
             alt={""}
+            quality={100}
           />
           <StaticImage
             css={voiceCard2}
             src={"../../static/images/customerVoice2.png"}
             alt={""}
+            quality={100}
           />
         </div>
       </div>

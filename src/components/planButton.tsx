@@ -76,12 +76,14 @@ export default (props: planButtonProps) => {
           css={{ width: "16px", height: "16px", margin: "8px" }}
           src="../../static/images/select.png"
           alt=""
+          loading={"eager"}
         />
       ) : (
         <StaticImage
           css={{ width: "16px", height: "16px", margin: "8px" }}
           src="../../static/images/disableSelect.png"
           alt=""
+          loading={"eager"}
         />
       )}
       <div css={display}>

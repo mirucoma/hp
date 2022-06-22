@@ -12,6 +12,7 @@ import { plans, slideData } from "../datas/content"
 import useDetailActiveSlide from "../hooks/DetailActiveSlide/useDetailActiveSlide"
 import useHomepageScrollStore from "../hooks/HomepageScrollStore/useHomepageScrollStore"
 
+
 export default () => {
   const [swiper, setSwiper] = useState<SwiperType>()
   const { activeDetailSlide, setActiveDetailSlide } = useDetailActiveSlide()
@@ -109,7 +110,7 @@ export default () => {
     width: "100%",
     maxWidth: "100%",
     height: "auto",
-    border: "1px solid gray",
+    //border: "1px solid gray",
     [mq[0]]:{ width: "93%", margin: "0 auto"}
   })
 
@@ -118,6 +119,7 @@ export default () => {
     textAlign: "left",
     paddingBottom: "24px",
     borderBottom: "1px dashed rgba(0, 0, 0, 0.12)",
+    marginTop: "24px",
 
     [mq[0]]: {
       p: { fontSize: "1rem" },
@@ -154,11 +156,14 @@ export default () => {
     cursor: "pointer",
     outline: "none",
     appearance: "none",
-    fontSize: "1.7rem",
+    fontSize: "2rem",
+    fontWeight: "900",
     border: "1px solid",
-    padding: "4px",
+    borderRadius: "8px",
+    padding: "4px 16px",
     marginLeft: "8px",
     color: color.primary.main,
+    margin:"8px"
   })
 
   return (

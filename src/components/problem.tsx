@@ -16,7 +16,7 @@ export default () => {
   })
 
   const dot = css({
-    textEmphasis: `circle ${color.primary.main}`,
+   // textEmphasis: `circle ${color.primary.main}`,
   })
 
   return (
@@ -26,7 +26,7 @@ export default () => {
           こんな状況を<span css={dot}>ミルコマ</span>なら変えれます
         </h3>
         <div css={{ marginTop: "32px", padding: "16px" }}>
-          <StaticImage src={"../../static/images/problem.png"} alt={""} />
+          <StaticImage src={"../../static/images/problem.png"} alt={""} quality={100} />
         </div>
       </div>
     </>

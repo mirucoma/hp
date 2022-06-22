@@ -10,6 +10,7 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-transformer-remark`,
     {
       resolve: `gatsby-plugin-emotion`,
       options: {
@@ -28,6 +29,13 @@ module.exports = {
         // default values
         publicPath: "docs",
         rmPublicFolder: false,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `markdown-pages`,
+        path: `${__dirname}/src/datas/markdown`,
       },
     },
   ],

@@ -1,6 +1,6 @@
 import React from "react"
-import { Global, css } from "@emotion/react"
-import Layout from "../components/layout"
+import Head from "../components/head"
+import Header from "../components/header"
 import Benefit from "../components/benefit"
 import Concept from "../components/concept"
 import Advantage from "../components/advantage"
@@ -16,23 +16,13 @@ import Footer from "../components/footer"
 import DetailActiveSlideProvider from "../hooks/DetailActiveSlide/detailActiveSlideProvider"
 import HomepageScrollStoreProvider from "../hooks/HomepageScrollStore/HomepageScrollStoreProvider"
 
-const global = css({
-  html: {
-    fontSize: "50%",
-  },
-  "*": {
-    margin: "0",
-    padding: "0",
-  },
-})
-
 export default function Home() {
   return (
     <>
-      <Global styles={global} />
       <DetailActiveSlideProvider>
         <HomepageScrollStoreProvider>
-          <Layout>
+          <Head title="ミルコマ" description="見るだけのコマ管理ツール">
+            <Header />
             <Benefit />
             <Concept />
             <Advantage />
@@ -44,7 +34,7 @@ export default function Home() {
             <HowToPay />
             <Announcements />
             <Footer />
-          </Layout>
+          </Head>
         </HomepageScrollStoreProvider>
       </DetailActiveSlideProvider>
     </>

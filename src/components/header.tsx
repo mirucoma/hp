@@ -1,9 +1,9 @@
 import React from "react"
-import { css } from "@emotion/react"
+import { css,Global } from "@emotion/react"
 import color from "../styles/color"
 import mq from "../styles/mediaQuery"
 import { StaticImage } from "gatsby-plugin-image"
-import { Link } from "gatsby"
+import { navigate } from "gatsby"
 
 import useHomepageScrollStore from "../hooks/HomepageScrollStore/useHomepageScrollStore"
 
@@ -13,7 +13,8 @@ export default () => {
   const refList = [advantageRef, priceRef, qandARef, announcementRef]
 
   const jumpToNavigation = (index: number) => {
-    scrollToRef(refList[index])
+    if(refList[index].current != null) scrollToRef(refList[index])
+    else navigate('/')
   }
   const barWrap = css({
     display: "flex",
@@ -63,7 +64,7 @@ export default () => {
       <header>
         <div css={barWrap}>
           <div css={logoImage}>
-            <StaticImage src="../../static/images/logo.png" alt="" />
+            <StaticImage src="../../static/images/logo.png" alt=""  loading={"eager"} />
           </div>
           <div css={content}>
             <p onClick={() => jumpToNavigation(0)} css={subtitled}>

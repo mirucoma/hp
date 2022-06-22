@@ -41,7 +41,24 @@ export default () => {
     boxShadow:
       "rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px",
     padding: "16px 24px",
+    position: "relative",
     [mq[2]]: { width: "88%" },
+  })
+
+  const boxClipperText = css({
+    fontSize: "4rem",
+    color: color.primary.main,
+    fontWeight: "900",
+    position: "absolute",
+    top: "-28px",
+    left: "-32px",
+    transform: "rotate(-20deg)" ,
+
+    [mq[0]]: { 
+      fontSize: "3rem",
+      top: "-18px",
+      left: "-27px",
+    }
   })
 
   const centerFlex = css({
@@ -168,6 +185,8 @@ export default () => {
       borderRadius: "8px",
     },
 
+    "-webkit-overflow-scrolling": "auto !important",
+
     [mq[0]]: { width: "96%" },
   })
 
@@ -196,6 +215,9 @@ export default () => {
           </h3>
         </div>
         <div css={shadowBox}>
+          <div>
+            <p css={boxClipperText}>さらに…</p>
+          </div>
           <div css={centerFlex}>
             <p css={detailPopText}>
               生徒が<span css={boldText}>15人以内</span>なら
@@ -231,7 +253,7 @@ export default () => {
             お支払い情報の登録を行い、プランの選択を行わない限り、支払は行われません。{" "}
             <br />
             ※2 生徒・講師・保護者はそれぞれ最大15人まで登録できます。 <br />
-            ※3 退塾した生徒は含まれません。
+            ※3 退塾した生徒は生徒数には含まれません。
             <br />
           </p>
         </div>
