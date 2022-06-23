@@ -1,3 +1,3 @@
-## Mirucoma HP
+## Mirucoma Homepage
 
-https://mirucoma.github.io/hp/
+https://mirucoma.jp
