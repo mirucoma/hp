@@ -5,7 +5,9 @@
   "version": "1.0.0",
   "license": "0BSD",
   "scripts": {
-    "build": "rm -rf docs && gatsby build --prefix-paths && mv public docs && rm -rf public/",
+    "prebuild": "rimraf docs",
+    "build": "gatsby build --prefix-paths",
+    "postbuild": "mv public docs && rimraf public",
     "dev": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "gatsby develop",
@@ -43,6 +45,7 @@
     "@types/react-helmet": "^6.1.5",
     "@types/typography": "^0.16.4",
     "prettier": "^2.5.1",
+    "rimraf": "^3.0.2",
     "typescript": "^4.6.2"
   },
   "repository": {
