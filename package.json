@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-hello-world",
+  "name": "@mirucoma/homepage",
   "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
-  "version": "0.1.0",
+  "description": "A Mirucoma homepage. Provide by Gatsby",
+  "version": "1.0.0",
   "license": "0BSD",
   "scripts": {
     "build": "rm -rf docs && gatsby build --prefix-paths && mv public docs && rm -rf public/",
@@ -47,9 +47,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
+    "url": "https://github.com/mirucoma/hp"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/mirucoma/hp/issues"
   }
 }
