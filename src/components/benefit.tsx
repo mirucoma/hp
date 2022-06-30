@@ -61,18 +61,26 @@ export default () => {
 
   const inVectorImage = css({
     position: "absolute",
-    top: "16%",
+    top: "5%",
     left: "8%",
-    // opacity: "0.9",
+
+    [mq[4]]:{
+      top: "16%"
+    },
 
     boxShadow: "0px 11px 15px 0px rgba(0, 0, 0, 0.2)",
   })
 
   const inVectorDeviceImage = css({
     position: "absolute",
-    bottom: "10%",
+    bottom: "0%",
     right: "25%",
-    // opacity: "0.9",
+
+    [mq[4]]:{ 
+      position: "absolute",
+      bottom: "10%",
+      right: "25%",
+    }
   })
 
   return (

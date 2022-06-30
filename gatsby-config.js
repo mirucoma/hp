@@ -11,6 +11,12 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-remark`,
+    // {
+    //   resolve: `gatsby-plugin-google-gtag`,
+    //   options: {
+    //     trackingIds: [process.env.GOOGLE_ANALYTICS_TRACKING_ID],
+    //   },
+    // },
     {
       resolve: `gatsby-plugin-emotion`,
       options: {

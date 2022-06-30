@@ -7,7 +7,7 @@
   "scripts": {
     "prebuild": "rimraf docs",
     "build": "gatsby build --prefix-paths",
-    "postbuild": "mv public docs && rimraf public",
+    "postbuild": "mv public docs && rimraf public && touch docs/CNAME && echo mirucoma.jp > docs/CNAME",
     "dev": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "gatsby develop",
