@@ -19,6 +19,7 @@
     "@babel/preset-react": "^7.16.7",
     "@emotion/babel-plugin": "^11.7.2",
     "@emotion/react": "^11.8.1",
+    "@react-hook/media-query": "^1.1.1",
     "axios": "^0.27.2",
     "gatsby": "^4.9.1",
     "gatsby-plugin-emotion": "^7.9.0",

@@ -3,22 +3,29 @@ import { css } from "@emotion/react"
 import color from "../styles/color"
 import mq from "../styles/mediaQuery"
 
+import CampainBelt from "./campainBelt"
 import { StaticImage } from "gatsby-plugin-image"
 
 export default () => {
+  const Wrapper = css({
+    backgroundColor: color.primary.main,
+    overflow: "hidden",
+    [mq[0]]: { height: "auto"},
+    // height: "100vh",
+
+    position: "relative",
+  })
   const benefitWrapper = css({
-    height: "100vh",
+     height: "100%",
     display: "flex",
-    [mq[0]]: { height: "228px" },
+    // [mq[0]]: { height: "228px" },
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: color.primary.main,
-
-    overflow: "hidden",
   })
 
   const popWrapper = css({
     marginLeft: "16px",
+    paddingBottom: "8px"
   })
 
   const popText = css({
@@ -64,8 +71,8 @@ export default () => {
     top: "5%",
     left: "8%",
 
-    [mq[4]]:{
-      top: "16%"
+    [mq[4]]: {
+      top: "16%",
     },
 
     boxShadow: "0px 11px 15px 0px rgba(0, 0, 0, 0.2)",
@@ -76,42 +83,55 @@ export default () => {
     bottom: "0%",
     right: "25%",
 
-    [mq[4]]:{ 
+    [mq[4]]: {
       position: "absolute",
       bottom: "10%",
       right: "25%",
-    }
+    },
+  })
+
+  const belt = css({
+    // position: "absolute",
+    // bottom: "0%",
+    // [mq[0]]: {
+    //   position: "static",
+    // }
   })
 
   return (
-    <div css={benefitWrapper}>
-      <div css={popWrapper}>
-        <p css={popText}>
-          必要な機能だけを
-          <br />
-          選べる時代へ
-        </p>
-        <p css={subText}>
-          ミルコマは選べるからこそ実現できる安さと十分な機能を兼ね備えた
-          <br />
-          塾管理システムです。
-        </p>
-        <a href="https://app.mirucoma.jp/register">
-          <button css={startButton}>今すぐ始める</button>
-        </a>
+    <div css={Wrapper}>
+      <div css={benefitWrapper}>
+        <div css={popWrapper}>
+          <p css={popText}>
+            必要な機能だけを
+            <br />
+            選べる時代へ
+          </p>
+          <p css={subText}>
+            ミルコマは選べるからこそ実現できる安さと十分な機能を兼ね備えた
+            <br />
+            塾管理システムです。
+          </p>
+          <a href="https://app.mirucoma.jp/register">
+            <button css={startButton}>今すぐ始める</button>
+          </a>
+        </div>
+        <div css={vector}>
+          <StaticImage
+            css={inVectorImage}
+            src="../../static/images/mainScreen.png"
+            alt=""
+          />
+          <StaticImage
+            css={inVectorDeviceImage}
+            src="../../static/images/mock.png"
+            width={149}
+            alt=""
+          />
+        </div>
       </div>
-      <div css={vector}>
-        <StaticImage
-          css={inVectorImage}
-          src="../../static/images/mainScreen.png"
-          alt=""
-        />
-        <StaticImage
-          css={inVectorDeviceImage}
-          src="../../static/images/mock.png"
-          width={149}
-          alt=""
-        />
+      <div css={belt}>
+        <CampainBelt />
       </div>
     </div>
   )
