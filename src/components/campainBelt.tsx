@@ -42,13 +42,14 @@ export default () => {
 
   const rangePop = css({
     fontSize: "2rem",
+    margin: 0,
 
     [mq[0]]: { fontSize: "1.5rem" },
   })
 
   const redEmphasis = css({
     color: "red",
-    fontSize: "2.6rem",
+    fontSize: "2.8rem",
     paddingLeft: "24px",
     [mq[0]]: { fontSize: "1.5rem", padding: 0 },
   })
@@ -59,6 +60,8 @@ export default () => {
     borderRadius: "8px",
     padding: "8px 16px",
     textAlign: "left",
+
+    alignItems: "center",
 
     [mq[3]]: { marginTop: "12px", flexFlow: "column", width: "100%" },
   })
@@ -118,7 +121,7 @@ export default () => {
               <div>
                 <p css={subPop}>利用料金が</p>
                 <p>
-                  <span css={weakText}>１ヶ月 →</span>{" "}
+                  <span css={weakText}>１ヶ月 →</span>
                 </p>
               </div>
               <p>
@@ -129,7 +132,7 @@ export default () => {
 
           <div css={mobileWrapWrapper}>
             <p css={rangePop}>キャンペーン期間</p>
-            <p>
+            <p css={{margin: 0}}>
               <span css={redEmphasis}>
                 2022年8月1日 (月) 00:00 ~ 2022年8月31日 (水) 23:59
               </span>
