@@ -91,11 +91,6 @@ export default () => {
   })
 
   const belt = css({
-    // position: "absolute",
-    // bottom: "0%",
-    // [mq[0]]: {
-    //   position: "static",
-    // }
   })
 
   return (

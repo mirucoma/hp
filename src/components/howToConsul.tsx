@@ -128,6 +128,8 @@ export default () => {
     color: "white",
     marginTop: "48px",
 
+    cursor: "pointer",
+
     [mq[0]]: {
       padding: "11px 72px",
     },
@@ -182,7 +184,7 @@ export default () => {
             </div>
           </div>
           <div css={{ width: "fit-content", margin: "0 auto" }}>
-            <a href="https://app.mirucoma.jp/register">
+            <a href="https://forms.gle/ngkuHq3o31o9ZKNm6">
               <button css={startButton}>予約フォーム</button>
             </a>
           </div>
