@@ -10,6 +10,7 @@ import Detail from "../components/detail"
 import QandA from "../components/qandA"
 import Price from "../components/price"
 import HowToPay from "../components/howToPay"
+import HowToConsul from "../components/howToConsul"
 import Announcements from "../components/announcements"
 import Footer from "../components/footer"
 
@@ -32,6 +33,7 @@ export default function Home() {
             <QandA />
             <Price />
             <HowToPay />
+            <HowToConsul />
             <Announcements />
             <Footer />
           </Head>
