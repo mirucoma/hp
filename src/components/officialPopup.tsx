@@ -3,6 +3,7 @@ import { css } from "@emotion/react"
 import color from "../styles/color"
 import mq from "../styles/mediaQuery"
 import { StaticImage } from "gatsby-plugin-image"
+import { Link } from "gatsby"
 
 export default () => {
   const [open, setOpen] = useState<boolean>(true)
@@ -40,7 +41,13 @@ export default () => {
   return (
     <>
       <div css={Wrapper}>
-        <div css={{ display: "flex", justifyContent: "space-between",gap: "16px"}}>
+        <div
+          css={{
+            display: "flex",
+            justifyContent: "space-between",
+            gap: "16px",
+          }}
+        >
           <div css={{ display: "flex", gap: "5px" }}>
             <StaticImage
               src="../../static/images/mirucoma.png"
@@ -72,11 +79,13 @@ export default () => {
               src="../../static/images/facebookLogo.png"
               alt="facebookLogo"
             />
-            <StaticImage
-              css={{ width: "40px", height: "40px" }}
-              src="../../static/images/instagram.png"
-              alt="instagram logo"
-            />
+            <Link to="https://www.instagram.com/mirucoma_/">
+              <StaticImage
+                css={{ width: "40px", height: "40px" }}
+                src="../../static/images/instagram.png"
+                alt="instagram logo"
+              />
+            </Link>
           </div>
           <div>
             <p css={officialPipText}>お電話でもお問い合わせいただけます</p>
