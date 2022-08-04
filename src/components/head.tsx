@@ -20,6 +20,9 @@ export default (props: headProps ) => {
       margin: "0",
       padding: "0",
     },
+    p:{
+      margin: "0",
+    }
   })
   return (
     <>

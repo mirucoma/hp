@@ -5,18 +5,19 @@ import mq from "../styles/mediaQuery"
 
 import CampainBelt from "./campainBelt"
 import { StaticImage } from "gatsby-plugin-image"
+import OfficialPopup from "./officialPopup"
 
 export default () => {
   const Wrapper = css({
     backgroundColor: color.primary.main,
     overflow: "hidden",
-    [mq[0]]: { height: "auto"},
+    [mq[0]]: { height: "auto" },
     // height: "100vh",
 
     position: "relative",
   })
   const benefitWrapper = css({
-     height: "100%",
+    height: "100%",
     display: "flex",
     // [mq[0]]: { height: "228px" },
     justifyContent: "center",
@@ -25,7 +26,7 @@ export default () => {
 
   const popWrapper = css({
     marginLeft: "16px",
-    paddingBottom: "8px"
+    paddingBottom: "8px",
   })
 
   const popText = css({
@@ -90,8 +91,16 @@ export default () => {
     },
   })
 
-  const belt = css({
+  const popUp = css({
+    marginLeft: "auto",
+    width: "fit-content",
+    marginRight: "20px",
+    marginBottom: "20px",
+
+    [mq[0]]: { margin: "0 auto", marginBottom: "8px",padding: "8px"},
   })
+
+  const belt = css({})
 
   return (
     <div css={Wrapper}>
@@ -124,6 +133,9 @@ export default () => {
             alt=""
           />
         </div>
+      </div>
+      <div css={popUp}>
+        <OfficialPopup />
       </div>
       <div css={belt}>
         <CampainBelt />
