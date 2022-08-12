@@ -92,15 +92,28 @@ export default () => {
   })
 
   const popUp = css({
-    marginLeft: "auto",
-    width: "fit-content",
-    marginRight: "20px",
-    marginBottom: "20px",
+    // marginLeft: "auto",
+    // width: "fit-content",
+    // marginRight: "20px",
+    // marginBottom: "20px",
 
-    [mq[0]]: { margin: "0 auto", marginBottom: "8px",padding: "8px"},
+    position: "fixed",
+    right: 30,
+    zIndex: 99,
+    bottom: 30,
+    [mq[0]]: {
+      // margin: "0 auto",
+      // marginBottom: "8px",
+      padding: "8px",
+      right: 10,
+      bottom: 20,
+    },
   })
 
-  const belt = css({})
+  const belt = css({
+    marginTop: "120px",
+    [mq[0]]:{ marginTop: "32px"}
+  })
 
   return (
     <div css={Wrapper}>

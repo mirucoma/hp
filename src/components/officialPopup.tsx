@@ -16,6 +16,11 @@ export default () => {
     display: "inline-block",
     padding: "8px 14px",
     borderRadius: "8px",
+    width: "fit-content",
+    // marginLeft: "auto",
+
+    position: "sticky",
+    bottom: 30,
   })
 
   const popupButton = css({
