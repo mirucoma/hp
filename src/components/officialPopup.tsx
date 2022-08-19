@@ -79,11 +79,13 @@ export default () => {
         </div>
         <div css={content}>
           <div css={{ display: "flex", gap: "20px" }}>
-            <StaticImage
-              css={{ width: "40px", height: "40px" }}
-              src="../../static/images/facebookLogo.png"
-              alt="facebookLogo"
-            />
+            <Link to="https://www.facebook.com/profile.php?id=100081012923866">
+              <StaticImage
+                css={{ width: "40px", height: "40px" }}
+                src="../../static/images/facebookLogo.png"
+                alt="facebookLogo"
+              />
+            </Link>
             <Link to="https://www.instagram.com/mirucoma_/">
               <StaticImage
                 css={{ width: "40px", height: "40px" }}
