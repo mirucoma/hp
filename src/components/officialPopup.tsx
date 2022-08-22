@@ -110,7 +110,7 @@ export default () => {
                 alt="callMark"
               />
               <p css={{ color: color.primary.main, fontSize: "1.8rem" }}>
-                0120-3650-3650
+                050-3637-6470
                 <span css={{ fontSize: "1.3rem" }}> (平日 : 9:00 - 18:00)</span>
               </p>
             </div>
