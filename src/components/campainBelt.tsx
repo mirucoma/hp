@@ -134,7 +134,7 @@ export default () => {
             <p css={rangePop}>キャンペーン期間</p>
             <p css={{margin: 0}}>
               <span css={redEmphasis}>
-                2022年8月1日 (月) 00:00 ~ 2022年8月31日 (水) 23:59
+                2022年8月1日 (月) 00:00 ~ 2022年9月15日 (木) 23:59
               </span>
               まで
             </p>
