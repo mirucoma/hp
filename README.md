@@ -3,4 +3,4 @@
 https://mirucoma.jp
 
 実行.  
-```npm run dev```
+```yarn run dev```
