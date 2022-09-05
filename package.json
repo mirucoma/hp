@@ -5,7 +5,6 @@
   "version": "1.0.0",
   "license": "0BSD",
   "scripts": {
-    "prebuild": "rimraf docs",
     "build": "gatsby build --prefix-paths",
     "dev": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
