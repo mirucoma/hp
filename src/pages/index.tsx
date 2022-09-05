@@ -13,31 +13,29 @@ import HowToConsul from "../components/howToConsul"
 import Announcements from "../components/announcements"
 import Footer from "../components/footer"
 
-import DetailActiveSlideProvider from "../hooks/DetailActiveSlide/detailActiveSlideProvider"
+import DetailActiveSlideProvider from "../hooks/DetailActiveSlide/DetailActiveSlideProvider"
 import HomepageScrollStoreProvider from "../hooks/HomepageScrollStore/HomepageScrollStoreProvider"
 
 export default function Home() {
   return (
-    <>
-      <DetailActiveSlideProvider>
-        <HomepageScrollStoreProvider>
-          <Head title="ミルコマ" description="見るだけのコマ管理ツール">
-            <Header />
-            <Benefit />
-            <Concept />
-            <Advantage />
-            <Problem />
-            <CustomerVoice />
-            <Detail />
-            <QandA />
-            <Price />
-            <HowToPay />
-            <HowToConsul />
-            <Announcements />
-            <Footer />
-          </Head>
-        </HomepageScrollStoreProvider>
-      </DetailActiveSlideProvider>
-    </>
+    <DetailActiveSlideProvider>
+      <HomepageScrollStoreProvider>
+        <Head title="ミルコマ" description="見るだけのコマ管理ツール">
+          <Header />
+          <Benefit />
+          <Concept />
+          <Advantage />
+          <Problem />
+          <CustomerVoice />
+          <Detail />
+          <QandA />
+          <Price />
+          <HowToPay />
+          <HowToConsul />
+          <Announcements />
+          <Footer />
+        </Head>
+      </HomepageScrollStoreProvider>
+    </DetailActiveSlideProvider>
   )
 }
