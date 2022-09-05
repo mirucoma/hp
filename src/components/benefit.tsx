@@ -1,11 +1,10 @@
-import React from "react"
 import { css } from "@emotion/react"
 import color from "../styles/color"
 import mq from "../styles/mediaQuery"
 
 import CampainBelt from "./campainBelt"
 import { StaticImage } from "gatsby-plugin-image"
-import OfficialPopup from "./officialPopup"
+import OfficialPopup from "./OfficialPopup"
 
 export default () => {
   const Wrapper = css({

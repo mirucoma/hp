@@ -1,4 +1,3 @@
-import React from "react"
 import Head from "../components/head"
 import Header from "../components/header"
 import Benefit from "../components/benefit"
