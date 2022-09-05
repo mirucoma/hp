@@ -3,6 +3,7 @@ import { css } from "@emotion/react"
 import color from "../styles/color"
 import { StaticImage } from "gatsby-plugin-image"
 import { Link } from "gatsby"
+import { Facebook, Instagram } from "./image-logos"
 
 const wrapperStyle = css({
   backgroundColor: "white",
@@ -80,18 +81,10 @@ const OfficialPopup = () => {
       <div css={contentStyle}>
         <div css={{ display: "flex", gap: "20px" }}>
           <Link to="https://www.facebook.com/profile.php?id=100081012923866">
-            <StaticImage
-              css={{ width: "40px", height: "40px" }}
-              src="../../static/images/facebookLogo.png"
-              alt="facebookLogo"
-            />
+            <Facebook alt="Facebookへのリンク" />
           </Link>
           <Link to="https://www.instagram.com/mirucoma_/">
-            <StaticImage
-              css={{ width: "40px", height: "40px" }}
-              src="../../static/images/instagram.png"
-              alt="instagram logo"
-            />
+            <Instagram alt="Instagramへのリンク" />
           </Link>
         </div>
         <div>
@@ -110,7 +103,10 @@ const OfficialPopup = () => {
               alt="callMark"
             />
             <p css={{ color: color.primary.main, fontSize: "1.8rem" }}>
-              <a href="tel:05036376470" css={{ color: 'inherit' }}> 050-3637-6470</a>
+              <a href="tel:05036376470" css={{ color: "inherit" }}>
+                {" "}
+                050-3637-6470
+              </a>
               <span css={{ fontSize: "1.3rem" }}> (平日 : 9:00 - 18:00)</span>
             </p>
           </div>
