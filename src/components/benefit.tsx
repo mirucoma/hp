@@ -3,9 +3,7 @@ import { useMediaQuery } from "@react-hook/media-query"
 import color from "../styles/color"
 import mq from "../styles/mediaQuery"
 
-import CampainBelt from "./campainBelt"
 import { StaticImage } from "gatsby-plugin-image"
-import OfficialPopup from "./OfficialPopup"
 import { Fragment } from "react"
 
 const SubText = () => {
@@ -115,30 +113,6 @@ export default () => {
     },
   })
 
-  const popUp = css({
-    // marginLeft: "auto",
-    // width: "fit-content",
-    // marginRight: "20px",
-    // marginBottom: "20px",
-
-    position: "fixed",
-    right: 30,
-    zIndex: 99,
-    bottom: 30,
-    [mq[0]]: {
-      // margin: "0 auto",
-      // marginBottom: "8px",
-      padding: "8px",
-      right: 10,
-      bottom: 20,
-    },
-  })
-
-  const belt = css({
-    marginTop: "120px",
-    [mq[0]]: { marginTop: "32px" },
-  })
-
   return (
     <div css={Wrapper}>
       <div css={benefitWrapper}>
@@ -166,12 +140,6 @@ export default () => {
             alt=""
           />
         </div>
-      </div>
-      <div css={popUp}>
-        <OfficialPopup />
-      </div>
-      <div css={belt}>
-        <CampainBelt />
       </div>
     </div>
   )

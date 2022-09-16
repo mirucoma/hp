@@ -15,12 +15,14 @@ import Footer from "../components/footer"
 
 import DetailActiveSlideProvider from "../hooks/DetailActiveSlide/DetailActiveSlideProvider"
 import HomepageScrollStoreProvider from "../hooks/HomepageScrollStore/HomepageScrollStoreProvider"
+import OfficialPopup from "../components/OfficialPopup"
 
 export default function Home() {
   return (
     <DetailActiveSlideProvider>
       <HomepageScrollStoreProvider>
         <Head title="ミルコマ" description="見るだけのコマ管理ツール">
+          <OfficialPopup />
           <Header />
           <Benefit />
           <Concept />
