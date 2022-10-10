@@ -108,6 +108,7 @@ export default () => {
             </a>
           </div>
         </div>
+        <iframe css={{marginTop: "56px"}} src="https://docs.google.com/forms/d/e/1FAIpQLSdTRSPZJ9PS5lAXBJTui5n_25DscUlz09jy333w1GcrFkLWvg/viewform?embedded=true" width="640" height="1127" frameBorder="0" marginHeight={0} marginWidth={0} >読み込んでいます…</iframe>
       </div>
     </>
   )
