@@ -1,15 +1,15 @@
+import { useState } from "react"
 import DetailActiveSlideContext from "./DetailActiveSlideContext"
-import { ReactNode, useState } from "react"
+import { ChildrenProps } from "../../@types"
 
-type Props = {
-  children: ReactNode
-}
-const DetailActiveSlideProvider = (props: Props) => {
-  const { children } = props
+const DetailActiveSlideProvider = ({ children }: ChildrenProps) => {
   const [activeDetailSlide, setActiveDetailSlide] = useState(0)
   return (
     <DetailActiveSlideContext.Provider
-      value={{ activeDetailSlide:  activeDetailSlide,setActiveDetailSlide: setActiveDetailSlide}}
+      value={{
+        activeDetailSlide: activeDetailSlide,
+        setActiveDetailSlide: setActiveDetailSlide,
+      }}
     >
       {children}
     </DetailActiveSlideContext.Provider>

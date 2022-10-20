@@ -1,11 +1,39 @@
-import React from "react"
 import { css } from "@emotion/react"
+import { useMediaQuery } from "@react-hook/media-query"
 import color from "../styles/color"
 import mq from "../styles/mediaQuery"
 
-import CampainBelt from "./campainBelt"
 import { StaticImage } from "gatsby-plugin-image"
-import OfficialPopup from "./officialPopup"
+import { Fragment } from "react"
+
+const SubText = () => {
+  const matches = useMediaQuery("(min-width: 768px)")
+
+  return (
+    <p
+      css={{
+        color: "white",
+        fontSize: "1.8rem",
+        marginTop: 6,
+      }}
+    >
+      {matches && (
+        <Fragment>
+          ミルコマは選べるからこそ実現できる安さと十分な機能を兼ね備えた
+          <br />
+          塾管理システムです。
+        </Fragment>
+      )}
+      {!matches && (
+        <Fragment>
+          ミルコマは選べるからこそ実現できる安さ
+          <br />
+          と十分な機能を兼ね備えた塾管理システムです。
+        </Fragment>
+      )}
+    </p>
+  )
+}
 
 export default () => {
   const Wrapper = css({
@@ -35,12 +63,6 @@ export default () => {
     [mq[3]]: { fontSize: "6.6rem" },
     [mq[0]]: { fontSize: "5rem" },
     color: "white",
-  })
-
-  const subText = css({
-    color: "white",
-    fontSize: "1.8rem",
-    marginTop: 6,
   })
 
   const startButton = css({
@@ -91,30 +113,6 @@ export default () => {
     },
   })
 
-  const popUp = css({
-    // marginLeft: "auto",
-    // width: "fit-content",
-    // marginRight: "20px",
-    // marginBottom: "20px",
-
-    position: "fixed",
-    right: 30,
-    zIndex: 99,
-    bottom: 30,
-    [mq[0]]: {
-      // margin: "0 auto",
-      // marginBottom: "8px",
-      padding: "8px",
-      right: 10,
-      bottom: 20,
-    },
-  })
-
-  const belt = css({
-    marginTop: "120px",
-    [mq[0]]:{ marginTop: "32px"}
-  })
-
   return (
     <div css={Wrapper}>
       <div css={benefitWrapper}>
@@ -124,11 +122,7 @@ export default () => {
             <br />
             選べる時代へ
           </p>
-          <p css={subText}>
-            ミルコマは選べるからこそ実現できる安さと十分な機能を兼ね備えた
-            <br />
-            塾管理システムです。
-          </p>
+          <SubText />
           <a href="https://app.mirucoma.jp/register">
             <button css={startButton}>今すぐ始める</button>
           </a>
@@ -146,12 +140,6 @@ export default () => {
             alt=""
           />
         </div>
-      </div>
-      <div css={popUp}>
-        <OfficialPopup />
-      </div>
-      <div css={belt}>
-        <CampainBelt />
       </div>
     </div>
   )
