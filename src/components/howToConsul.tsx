@@ -3,6 +3,8 @@ import { css } from "@emotion/react"
 import color from "../styles/color"
 import mq from "../styles/mediaQuery"
 
+import ReservationForm from "./reservationForm"
+
 export default () => {
   const Wrapper = css({
     backgroundColor: color.primary.light,
@@ -80,6 +82,10 @@ export default () => {
     borderRadius: "16px",
 
     marginTop: "32px",
+
+    [mq[0]]: {
+      padding: "0",
+    },
   })
 
   const subTitle = css({
@@ -184,9 +190,7 @@ export default () => {
             </div>
           </div>
           <div css={{ width: "fit-content", margin: "0 auto" }}>
-            <a href="https://forms.gle/ngkuHq3o31o9ZKNm6">
-              <button css={startButton}>予約フォーム</button>
-            </a>
+            <ReservationForm />
           </div>
         </div>
       </div>

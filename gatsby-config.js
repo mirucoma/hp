@@ -11,6 +11,7 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-remark`,
+    'gatsby-plugin-mantine',
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
