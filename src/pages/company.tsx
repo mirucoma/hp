@@ -71,7 +71,7 @@ export default function Home() {
             </li>
             <li>
               <p css={leftTitle}>電話番号</p>
-              <p css={rightContent}> 075-312-0404</p>
+              <p css={rightContent}> 050-3637-6470</p>
             </li>
             <li>
               <p css={leftTitle}>設立</p>
