@@ -1,4 +1,7 @@
 .DS_*
 *.log
 
-node_modules
+node_modules/
+.cache/
+public
+src/gatsby-types.d.ts
