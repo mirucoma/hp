@@ -1,11 +1,812 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
   <title>ミルコマ</title>
+  <link rel="stylesheet" href="css/slick-theme.css" />
+  <link rel="stylesheet" href="css/slick.css" />
+  <link rel="stylesheet" href="css/top.css?20220410" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dialog-polyfill/0.5.0/dialog-polyfill.min.js" defer></script>
 </head>
+
 <body>
-  Mirucoma New Homepage
+  <header id="header">
+    <div class="header_inner">
+      <ul class="headerBox DownMove">
+        <li class="leftBox">
+          <a href="index.html"><img src="./assets/Logo/Logo.png" alt=""></a>
+        </li>
+        <li class="rightBox">
+          <div class="menu gnavi">
+            <span class="jsHumb"></span>
+            <span class="jsHumb"></span>
+
+            <nav id="global_nav">
+              <div class="nav_inner">
+                <ul>
+                  <li class="sp">
+                    <a href="#"><img src="./assets/Logo/Logo.png" alt=""></a>
+                  </li>
+                  <li><a class="" href="index.html#concept">コンセプト</a></li>
+                  <li><a class="" href="index.html#cure">お客様の声</a></li>
+                  <li><a class="" href="index.html#plan">プラン紹介</a></li>
+                  <li><a class="" href="index.html#faq">FAQ</a></li>
+                  <li><a class="" href="index.html#online">オンライン相談</a></li>
+                  <li><a class="" href="index.html#info">お知らせ</a></li>
+                  <ul class="nav02">
+                    <li class="sp"><a href="tos.html">利用規約</a></li>
+                    <li class="sp"><a href="privacy.html">プライバシーポリシー</a></li>
+                    <li class="sp"><a href="commerce.html">特定商取引法に基づく表記</a></li>
+                    <li class="sp"><a href="company.html">運営会社</a></li>
+                    <li class="sp"><a href="contact.html">お問い合わせ</a></li>
+                  </ul>
+                  <div class="telBox_hub flex ai-center">
+                    <div class="sp"><img src="./assets/Icon/Telephone_hub.svg" alt=""></div>
+                    <p class="sp">050-3637-6470</p>
+                  </div>
+                  <div class="timeBox_hub flex ai-center">
+                    <div class="sp"><img src="./assets/Icon/Clock_hub.svg" alt=""></div>
+                    <p class="sp">9:00～18:00 (平日のみ)</p>
+                  </div>
+                  <div class="iconBox_hub flex">
+                    <div class="pc"><a class="" href="#"><img src="./assets/Icon/Brand_Facebook.svg"
+                          alt="フェイスブックのアイコン"></a>
+                    </div>
+                    <div class="pc"><a class="" href="#"><img src="./assets/Icon/Brand_Instagram.svg"
+                          alt="インスタグラムのアイコン"></a>
+                    </div>
+                  </div>
+                  <div class="iconBox_hub flex">
+                    <div class="sp"><a class="" href="#"><img src="./assets/Icon/Brand_Facebook_hub.svg"
+                          alt="フェイスブックのアイコン"></a>
+                    </div>
+                    <div class="sp last-of-type"><a class="" href="#"><img src="./assets/Icon/Brand_Instagram_hub.svg"
+                          alt="インスタグラムのアイコン"></a>
+                    </div>
+                  </div>
+                  <div class="copyright_hub sp">
+                    <p>©2023 Lagoon Corporation, inc.</p>
+                  </div>
+                </ul>
+              </div>
+            </nav>
+
+          </div>
+        </li>
+        <a class="pc" href="#">
+          <ul class="login flex ai-center">
+            <li>ログイン</li>
+            <li><img src="./assets/Icon/Login.svg" alt="ログイン"></li>
+          </ul>
+        </a>
+        <ul class="header_icon flex">
+          <li class="sp"><a href="#"><img src="./assets/Icon/Brand_Facebook.svg" alt=""></a></li>
+          <li class="sp"><a href="#"><img src="./assets/Icon/Brand_Instagram.svg" alt=""></a></li>
+        </ul>
+      </ul>
+    </div>
+  </header>
+  <main>
+    <!-- メイン -->
+    <section class="main">
+      <div class="main_message">
+        <p class="main_ttl">塾長さんのストレスをゼロに。</p>
+        <p class="main_txt">塾運営に欠かせない<span class="color_g">便利な機能</span>のラインナップ<br>
+          <span class="color_g">開発費ゼロ</span>で欲しい機能のオーダーもできる
+        </p>
+      </div>
+    </section>
+
+    <!-- コンセプト -->
+    <section id="concept" class="concept">
+      <div class="sec_ttl">
+        <div class="sec_img_concept">
+          <img src="./assets/Image/Section_Concept.png" alt="concept">
+        </div>
+        <div class="sec_subttl">
+          <span class="color_g">コ</span>ンセプト
+        </div>
+      </div>
+      <div class="conceptBox">
+        <div class="concept_inner">
+          <div class="concept_message">
+            <div class="concept_ttl t-center">かゆいところに手が届く。</div>
+            <div class="concept_txt">
+              塾長さんの事務作業が大変なのを、私たちミルコマは知っています。
+              既存のシステムを使っていても「ここが使いにくい」や
+              「もっとこうなればいいのに」といったお声を塾長さんから多くいただいてきました。
+              そこでミルコマはデザインや設計を常に見直し、塾長さんにとってより業務負担のないようにより使いやすいシステムとなっております。
+              塾長さんからの『楽になって大変助かっています』というお声を胸にミルコマは挑戦を続けます。
+              <div class="concept_img">
+                <img src="./assets/Image/Concept_Illustration.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- お客様の声 -->
+    <section id="cure" class="cure">
+      <div class="sec_ttl">
+        <div class="sec_img_cure">
+          <img src="./assets/Image/Section_CustomerReviews.png" alt="concept">
+        </div>
+        <div class="sec_subttl">
+          <span class="color_g">お</span>客様の声
+        </div>
+
+
+
+        <div class="loop02">
+          <ul class="loop02__box">
+            <li class="loop02__item">
+              <div class="cure_item flex jc-around">
+                <div class="cure_imgBox">
+                  <img src="./assets/Demo/demo_image_1.png" alt="スーツを着て座って話している男性">
+                  <p>京都 塾長（30代男性）生徒数00名</p>
+                </div>
+                <div class="cure_txtBox t-left">
+                  <p class="cure_plan">請求管理プラン</p>
+                  <p class="cure_ttl">悩みの種だった事務作業の時間が<br>大幅に短縮できました。</p>
+                  <p class="cure_txt">
+                    このテキストは、文字をイメージするための仮の文章です。従って、パンフレットやウェブサイトなど製作物の実際の内容とは関係ありませんので、ご了承ください。このテキストは、文字をイメージするための仮の文章です。従って、パンフレットやウェブサイトなど製作物の実際の内容とは関係ありませんので、ご了承ください。このテキストは、文字をイメージするための仮
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li class="loop02__item">
+              <div class="cure_item flex jc-around">
+                <div class="cure_imgBox">
+                  <img src="./assets/Demo/demo_image_4.png" alt="スーツを着て座って話している男性">
+                  <p>京都 塾長（30代男性）生徒数00名</p>
+                </div>
+                <div class="cure_txtBox t-left">
+                  <p class="cure_plan">請求管理プラン</p>
+                  <p class="cure_ttl">悩みの種だった事務作業の時間が<br>大幅に短縮できました。</p>
+                  <p class="cure_txt">
+                    このテキストは、文字をイメージするための仮の文章です。従って、パンフレットやウェブサイトなど製作物の実際の内容とは関係ありませんので、ご了承ください。このテキストは、文字をイメージするための仮の文章です。従って、パンフレットやウェブサイトなど製作物の実際の内容とは関係ありませんので、ご了承ください。このテキストは、文字をイメージするための仮
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li class="loop02__item">
+              <div class="cure_item flex jc-around">
+                <div class="cure_imgBox">
+                  <img src="./assets/Demo/demo_image_3.png" alt="スーツを着て座って話している男性">
+                  <p>京都 塾長（30代男性）生徒数00名</p>
+                </div>
+                <div class="cure_txtBox t-left">
+                  <p class="cure_plan">請求管理プラン</p>
+                  <p class="cure_ttl">悩みの種だった事務作業の時間が<br>大幅に短縮できました。</p>
+                  <p class="cure_txt">
+                    このテキストは、文字をイメージするための仮の文章です。従って、パンフレットやウェブサイトなど製作物の実際の内容とは関係ありませんので、ご了承ください。このテキストは、文字をイメージするための仮の文章です。従って、パンフレットやウェブサイトなど製作物の実際の内容とは関係ありませんので、ご了承ください。このテキストは、文字をイメージするための仮
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li class="loop02__item">
+              <div class="cure_item flex jc-around">
+                <div class="cure_imgBox">
+                  <img src="./assets/Demo/demo_image_1.png" alt="スーツを着て座って話している男性">
+                  <p>京都 塾長（30代男性）生徒数00名</p>
+                </div>
+                <div class="cure_txtBox t-left">
+                  <p class="cure_plan">請求管理プラン</p>
+                  <p class="cure_ttl">悩みの種だった事務作業の時間が<br>大幅に短縮できました。</p>
+                  <p class="cure_txt">
+                    このテキストは、文字をイメージするための仮の文章です。従って、パンフレットやウェブサイトなど製作物の実際の内容とは関係ありませんので、ご了承ください。このテキストは、文字をイメージするための仮の文章です。従って、パンフレットやウェブサイトなど製作物の実際の内容とは関係ありませんので、ご了承ください。このテキストは、文字をイメージするための仮
+                  </p>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <ul class="loop02__box">
+            <li class="loop02__item">
+              <div class="cure_item flex jc-around">
+                <div class="cure_imgBox">
+                  <img src="./assets/Demo/demo_image_3.png" alt="スーツを着て座って話している男性">
+                  <p>京都 塾長（30代男性）生徒数00名</p>
+                </div>
+                <div class="cure_txtBox t-left">
+                  <p class="cure_plan">請求管理プラン</p>
+                  <p class="cure_ttl">悩みの種だった事務作業の時間が<br>大幅に短縮できました。</p>
+                  <p class="cure_txt">
+                    このテキストは、文字をイメージするための仮の文章です。従って、パンフレットやウェブサイトなど製作物の実際の内容とは関係ありませんので、ご了承ください。このテキストは、文字をイメージするための仮の文章です。従って、パンフレットやウェブサイトなど製作物の実際の内容とは関係ありませんので、ご了承ください。このテキストは、文字をイメージするための仮
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li class="loop02__item">
+              <div class="cure_item flex jc-around">
+                <div class="cure_imgBox">
+                  <img src="./assets/Demo/demo_image_4.png" alt="スーツを着て座って話している男性">
+                  <p>京都 塾長（30代男性）生徒数00名</p>
+                </div>
+                <div class="cure_txtBox t-left">
+                  <p class="cure_plan">請求管理プラン</p>
+                  <p class="cure_ttl">悩みの種だった事務作業の時間が<br>大幅に短縮できました。</p>
+                  <p class="cure_txt">
+                    このテキストは、文字をイメージするための仮の文章です。従って、パンフレットやウェブサイトなど製作物の実際の内容とは関係ありませんので、ご了承ください。このテキストは、文字をイメージするための仮の文章です。従って、パンフレットやウェブサイトなど製作物の実際の内容とは関係ありませんので、ご了承ください。このテキストは、文字をイメージするための仮
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li class="loop02__item">
+              <div class="cure_item flex jc-around">
+                <div class="cure_imgBox">
+                  <img src="./assets/Demo/demo_image_3.png" alt="スーツを着て座って話している男性">
+                  <p>京都 塾長（30代男性）生徒数00名</p>
+                </div>
+                <div class="cure_txtBox t-left">
+                  <p class="cure_plan">請求管理プラン</p>
+                  <p class="cure_ttl">悩みの種だった事務作業の時間が<br>大幅に短縮できました。</p>
+                  <p class="cure_txt">
+                    このテキストは、文字をイメージするための仮の文章です。従って、パンフレットやウェブサイトなど製作物の実際の内容とは関係ありませんので、ご了承ください。このテキストは、文字をイメージするための仮の文章です。従って、パンフレットやウェブサイトなど製作物の実際の内容とは関係ありませんので、ご了承ください。このテキストは、文字をイメージするための仮
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li class="loop02__item">
+              <div class="cure_item flex jc-around">
+                <div class="cure_imgBox">
+                  <img src="./assets/Demo/demo_image_1.png" alt="スーツを着て座って話している男性">
+                  <p>京都 塾長（30代男性）生徒数00名</p>
+                </div>
+                <div class="cure_txtBox t-left">
+                  <p class="cure_plan">請求管理プラン</p>
+                  <p class="cure_ttl">悩みの種だった事務作業の時間が<br>大幅に短縮できました。</p>
+                  <p class="cure_txt">
+                    このテキストは、文字をイメージするための仮の文章です。従って、パンフレットやウェブサイトなど製作物の実際の内容とは関係ありませんので、ご了承ください。このテキストは、文字をイメージするための仮の文章です。従って、パンフレットやウェブサイトなど製作物の実際の内容とは関係ありませんので、ご了承ください。このテキストは、文字をイメージするための仮
+                  </p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="cure_img_item">
+          <img src="./assets/Image/CustomerReviews_Illustration.png" alt="">
+        </div>
+    </section>
+
+    <!-- プラン -->
+    <section id="plan" class="plan">
+      <div class="sec_ttl">
+        <div class="sec_img_cure">
+          <img src="./assets/Image/Section_PlanIntroduction.png" alt="concept">
+        </div>
+        <div class="sec_subttl">
+          <span class="color_g">プ</span>ラン紹介
+        </div>
+        <div class="plan_inner">
+          <div class="planBox">
+            <span class="plan_img"><img src="./assets/Image/PlanIntroduction_Illustration_Upper.png" alt=""></span>
+            <span class="plan_icon"><img src="./assets/Image/Icons.png" alt=""></span>
+
+            <div class="plan_ttlBox flex jc-between ai-end">
+              <div>
+                <p class="plan_catch">保護者の安心がこの値段で実現!!</p>
+                <p class="plan_ttl"><span class="plan_name color_g">入退室管理</span>プラン</p>
+              </div>
+              <div>
+                <p class="plan_tuki">月額(1校舎あたり)<span class="plan_cost">1,100円</span>(税込)</p>
+              </div>
+            </div>
+            <div class="plan_itemBox flex jc-between">
+              <ul class="plan_listBox t-left">
+                <li class="plan_list_img">
+                  <img src="./assets/Image/Recommendation.png" alt="">
+                </li>
+                <li class="plan_txt_itemBox">
+                  <p class="plan_txtBox_ttl color_g">❶業界最安料金</p>
+                  <p class="plan_txtBox_txt">
+                    入退室がその値段で本当にいけるの!?
+                    と言った驚きの声を多く頂戴しております。
+                    ミルコマを多くの方に知っていただくために
+                    この料金設定にしておりますので
+                    安心してお使いください。
+                  </p>
+                </li>
+                <li class="plan_txt_itemBox">
+                  <p class="plan_txtBox_ttl color_g">❷プッシュ通知ですぐに気づける</p>
+                  <p class="plan_txtBox_txt">
+                    専用アプリからのプッシュ通知で保護者の方に喜んでいただけます。
+                    入退室の通知をメールではなく保護者アプリへ通知するので
+                    保護者の方はすぐに気づくことができます。
+                    送り迎えの目安にできて入れてくださってよかったの声をいただいております。
+                  </p>
+                </li>
+                <li class="plan_txt_itemBox">
+                  <p class="plan_txtBox_ttl color_g">❸入退室の方法も多数完備</p>
+                  <p class="plan_txtBox_txt">
+                    QRコードによるカードでの入退室や
+                    パソコンでのマウス操作での入退室、
+                    カードの作成が不要になるタブレットでのタッチ形式での入退室といった
+                    さまざまな形式での入退室方法に対応しております。
+                  </p>
+                </li>
+              </ul>
+              <div class="iconBox">
+                <ul class="iconBox01 flex content">
+                  <li class="icon_txt color_g">使える機能</li>
+                  <li class="sankaku_g"></li>
+                  <li><a class="js-modal-open" href="" data-target="modal01"><img src="./assets/Image/Icon_bg_Web1.png"
+                        alt=""></a>
+                    <span class="plan_click sp"><img src="./assets/Image/Check_Bubble_Mobile.png" alt=""></span>
+                  </li>
+                  <li><a href="#"><img src="./assets/Image/Icon_bg_Web2.png" alt=""></a></li>
+                  <li class="web_icon"><img src="./assets/Image/Icon_bg_none.png" alt="">
+                    <span class="plan_click pc"><img src="./assets/Image/Check_Bubble_Web.png" alt=""></span>
+                  </li>
+                </ul>
+                <div id="modal01" class="modal js-modal">
+                  <div class="modal__bg js-modal-close"></div>
+                  <div class="modal__content">
+                    <div class="modalWrapper">
+                      <div class="modalContents">
+                        <div class="contents_itemBox flex jc-between">
+                          <div class="ttlBox flex ai-center">
+                            <div class="icon">
+                              <img src="./assets/Image/Icon_bg_Web2.png" alt="">
+                            </div>
+                            <div class="ttl">
+                              <p class="plan_ttl"><span class="plan_name color_g">入退室管理</span>機能</p>
+                            </div>
+                          </div>
+                          <div class="txtBox01">
+                            <div class="img">
+                              <img src="./assets/Image/Point.png" alt="">
+                            </div>
+                            <div class="flex ai-center">
+                              <p class="check"><img src="./assets/Icon/CheckBox.svg" alt=""></p>
+                              <p class="txt">生徒の入退室を<span class="plan_name color_g">リアルタイム</span>で確認できる</p>
+                            </div>
+                            <div class="flex ai-center">
+                              <p class="check"><img src="./assets/Icon/CheckBox.svg" alt=""></p>
+                              <p class="txt">生徒が<span class="plan_name color_g">QRコード</span>をかざすだけでOK</p>
+                            </div>
+                            <div class="flex ai-center">
+                              <p class="check"><img src="./assets/Icon/CheckBox.svg" alt=""></p>
+                              <p class="txt">履歴が残るので、<span class="plan_name color_g">受講コマ数</span>のカウントが容易</p>
+                            </div>
+                            <div class="flex ai-center">
+                              <p class="check"><img src="./assets/Icon/CheckBox.svg" alt=""></p>
+                              <p class="txt">保護者のスマホにも入退室の<span class="plan_name color_g">プッシュ通知</span>で安心</p>
+                            </div>
+                            <span class="modal_img"><img src="./assets/Image/Dialog_Dog.png" alt=""></span>
+                          </div>
+                        </div>
+                        <div class="contents_itemBox02 flex ai-center">
+                          <div class="img">
+                            <img src="./assets/Image/Dummy.png" alt="">
+                          </div>
+                          <div class="img_left pc">
+                            <img src="./assets/Image/Separator_Left.png" alt="">
+                          </div>
+                          <div class="img_bottom sp">
+                            <img src="./assets/Image/Separator_Bottom.png" alt="">
+                          </div>
+                          <div class="txtBox t-left">
+                            <p class="point_txt">Strong Point <span class="point_no">1</span></p>
+                            <p class="ttl">入退室機能</p>
+                            <p class="txt">
+                              生徒一人ひとりに対応したQRコードにより入退室管理が行えます。生徒がQRコードを塾のタブレットやパソコンで読み取る方式を採用しています。生徒の入室と退室時には保護者のアプリにプッシュ通知を送ることができます。保護者の安心に繋がり、子どもの送り迎えの目安にも使って頂けます。
+                            </p>
+                          </div>
+                        </div>
+                        <div class="contents_itemBox03 flex ai-center">
+                          <div class="txtBox t-left">
+                            <p class="point_txt">Strong Point <span class="point_no">2</span></p>
+                            <p class="ttl">入退室履歴</p>
+                            <p class="txt">
+                              入退室履歴では、生徒一人ひとりの滞在時間の把握やいつ来ていたかが分かるので、月謝の回数確認に重宝します。また、入退室の履歴を編集することができ、間違って入室や退室してしまった際には、後から修正することが出来ます。
+                            </p>
+                          </div>
+                          <div class="img_right pc">
+                            <img src="./assets/Image/Separator_Right.png" alt="">
+                          </div>
+                          <div class="img_bottom sp">
+                            <img src="./assets/Image/Separator_Bottom.png" alt="">
+                          </div>
+                          <div class="img">
+                            <img src="./assets/Image/Dummy.png" alt="">
+                          </div>
+                        </div>
+                      </div>
+                      <div id="closeModal" class="js-modal-close closeModal">
+                        ×
+                      </div>
+                    </div>
+                  </div><!--modal__inner-->
+                </div><!--modal-->
+                <ul class="iconBox02 flex">
+                  <li class="icon_txt color_o">使用アプリ</li>
+                  <li class="sankaku_o"></li>
+                  <li><a href="#"><img src="./assets/Image/Icon_bg_App1.png" alt=""></a></li>
+                  <li><img src="./assets/Image/Icon_bg_none.png" alt=""></li>
+                  <li><img src="./assets/Image/Icon_bg_none.png" alt=""></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="planBox">
+            <span class="plan_icon"><img src="./assets/Image/Icons.png" alt=""></span>
+            <div class="plan_ttlBox flex jc-between ai-end">
+              <div>
+                <p class="plan_catch">保護者とのコミュニケーションを超効率化!!</p>
+                <p class="plan_ttl"><span class="plan_name color_g">メッセージ管理</span>プラン</p>
+              </div>
+              <div>
+                <p class="plan_tuki">月額(1校舎あたり)<span class="plan_cost">4,400円</span>(税込)</p>
+              </div>
+            </div>
+            <div class="plan_itemBox flex jc-between">
+              <ul class="plan_listBox t-left">
+                <li class="plan_list_img">
+                  <img src="./assets/Image/Recommendation.png" alt="">
+                </li>
+                <li class="plan_txt_itemBox">
+                  <p class="plan_txtBox_ttl color_g">❶お手紙の超効率化</p>
+                  <p class="plan_txtBox_txt">
+                    保護者の方と1対1の連絡のやりとりや
+                    お知らせのグループ送信、お知らせの一括送信を使って
+                    確実に伝えたい情報を届けることができます。
+                    また開校を待って電話連絡する必要がなくなったと保護者の方から喜んでいただけます。
+                    今までお手紙に費やしていた、手紙の作成時間や封入作業、
+                    郵送代(１世帯あたり90円)を削減可能です。
+                  </p>
+                </li>
+                <li class="plan_txt_itemBox">
+                  <p class="plan_txtBox_ttl color_g">❷さまざまな送信方法に対応</p>
+                  <p class="plan_txtBox_txt">
+                    テキストはもちろん、画像や５分以内の動画
+                    PDFファイルを送信することもできます。
+                  </p>
+                </li>
+                <li class="plan_txt_itemBox">
+                  <p class="plan_txtBox_ttl color_g">❸便利な既読機能</p>
+                  <p class="plan_txtBox_txt">
+                    メッセージに既読がつくのは運営側だけなので
+                    急な対応で既読をつけたまま返せてなかったり
+                    焦って返信する必要がなくなります。
+                    お知らせによるグループ送信や一斉配信でも
+                    どの方が開封したのか一目瞭然なので
+                    情報が届いているかどうかをいつでも確認することができます。
+                  </p>
+                </li>
+              </ul>
+              <div class="iconBox">
+                <ul class="iconBox01 flex">
+                  <li class="icon_txt color_g">使える機能</li>
+                  <li class="sankaku_g"></li>
+                  <li><a class="js-modal-open" href="" data-target="modal01"><img src="./assets/Image/Icon_bg_Web5.png"
+                        alt=""></a></li>
+                  <li><a href="#"><img src="./assets/Image/Icon_bg_Web4.png" alt=""></a></li>
+                  <li><a href="#"><img src="./assets/Image/Icon_bg_Web2.png" alt=""></a></li>
+                </ul>
+                <ul class="iconBox02 flex">
+                  <li class="icon_txt color_o">使用アプリ</li>
+                  <li class="sankaku_o"></li>
+                  <li><a href="#"><img src="./assets/Image/Icon_bg_App1.png" alt=""></a></li>
+                  <li><a href="#"><img src="./assets/Image/Icon_bg_App2.png" alt=""></a></li>
+                  <li><img src="./assets/Image/Icon_bg_none.png" alt=""></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="planBox">
+            <span class="plan_icon"><img src="./assets/Image/Icons.png" alt=""></span>
+            <div class="plan_ttlBox flex jc-between ai-end">
+              <div>
+                <p class="plan_catch">手間な封入作業や郵送コスト0に!!</p>
+                <p class="plan_ttl"><span class="plan_name color_g">月謝管理</span>プラン</p>
+              </div>
+              <div>
+                <p class="plan_tuki">月額(1校舎あたり)<span class="plan_cost">4,400円</span>(税込)</p>
+              </div>
+            </div>
+            <div class="plan_itemBox flex jc-between">
+              <ul class="plan_listBox t-left">
+                <li class="plan_list_img">
+                  <img src="./assets/Image/Recommendation.png" alt="">
+                </li>
+                <li class="plan_txt_itemBox">
+                  <p class="plan_txtBox_ttl color_g">❶確実にお月謝の明細情報が保護者アプリに届く</p>
+                  <p class="plan_txtBox_txt">
+                    ミルコマで作成した保護者宛の請求書の明細を
+                    確実に保護者アプリに通知つきで一斉送信することができます。
+                  </p>
+                </li>
+                <li class="plan_txt_itemBox">
+                  <p class="plan_txtBox_ttl color_g">❷神経の使う作業から解放されます</p>
+                  <p class="plan_txtBox_txt">
+                    お金を扱う請求作業は毎回神経をすり減らします。
+                    毎月作成しないといけないとても大変なお月謝作成や
+                    お手紙への封入作業、郵送代(１世帯あたり90円)をなくすことができます。
+                  </p>
+                </li>
+                <li class="plan_txt_itemBox">
+                  <p class="plan_txtBox_ttl color_g">❸大幅な労働時間の短縮</p>
+                  <p class="plan_txtBox_txt">
+                    今まで７時間〜８時間、神経を研ぎ澄ませていた請求業務は
+                    ミスを大幅に減らし１時間１５分で完結するようになります。(生徒数50名を想定)
+                  </p>
+                </li>
+              </ul>
+              <div class="iconBox">
+                <ul class="iconBox01 flex">
+                  <li class="icon_txt color_g">使える機能</li>
+                  <li class="sankaku_g"></li>
+                  <li><a class="js-modal-open" href="" data-target="modal01"><img src="./assets/Image/Icon_bg_Web10.png"
+                        alt=""></a></li>
+                  <li><a href="#"><img src="./assets/Image/Icon_bg_Web9.png" alt=""></a></li>
+                  <li><a href="#"><img src="./assets/Image/Icon_bg_Web2.png" alt=""></a></li>
+                </ul>
+                <ul class="iconBox02 flex">
+                  <li class="icon_txt color_o">使用アプリ</li>
+                  <li class="sankaku_o"></li>
+                  <li><a href="#"><img src="./assets/Image/Icon_bg_App1.png" alt=""></a></li>
+                  <li><img src="./assets/Image/Icon_bg_none.png" alt=""></li>
+                  <li><img src="./assets/Image/Icon_bg_none.png" alt=""></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="contact_btn">
+            <a href="#">
+              <p class="btn_txt01">30日間無料トライアル</p>
+              <p class="btn_txt02">申し込み・お問い合わせはこちら</p>
+            </a>
+          </div>
+          <div class="plan_subimg">
+            <img src="./assets/Image/PlanIntroduction_Illustration_Bottom.png" alt="">
+          </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="faq">
+      <div class="sec_ttl">
+        <div class="sec_img_faq">
+          <img src="./assets/Image/Section_FAQ.png" alt="concept">
+        </div>
+        <div class="sec_subttl">
+          <span class="color_g">よ</span>くある質問
+        </div>
+      </div>
+      <!-- アコーディオン -->
+      <div class="accordion_rapper">
+        <div class="section s_02">
+          <span class="accordion_img">
+            <img src="./assets/Image/FAQ_Illustration.png" alt="">
+          </span>
+          <div class="accordion_one">
+            <div class="accordion_header">その他<div class="i_box"><i class="one_i"></i></div>
+            </div>
+            <div class="accordion_inner">
+              <div class="box_one">
+                <div class="accordionBox">
+                  <ul class="txt_list flex ai-center m-bottom15">
+                    <li class="accordion_icon"><img src="./assets/Image/Q.png" alt=""></li>
+                    <li class="accordion_txt01">一つの機能から使うことはできますか？</li>
+                  </ul>
+                  <ul class="txt_list flex ai-center">
+                    <li class="accordion_icon"><img src="./assets/Image/A.png" alt=""></li>
+                    <li class="accordion_txt02">
+                      はい、ミルコマは一つの機能から使っていただくことが可能になっております。<br />
+                      入退室機能だけ1校舎あたり税込1100円でのご利用も可能です。
+                    </li>
+                  </ul>
+                </div>
+                <div class="accordionBox">
+                  <ul class="txt_list flex ai-center m-bottom15">
+                    <li class="accordion_icon"><img src="./assets/Image/Q.png" alt=""></li>
+                    <li class="accordion_txt01">クラウドのセキュリティは大丈夫ですか？</li>
+                  </ul>
+                  <ul class="txt_list flex ai-center">
+                    <li class="accordion_icon"><img src="./assets/Image/A.png" alt=""></li>
+                    <li class="accordion_txt02">
+                      ミルコマはAmazon Web Serviceを用いてクラウド運用しており、各システムは定期的なセキュリティアップデートを行っています。 また、お客様のデータを保存しているデータベースはAES-256 暗号化アルゴリズムを使用して暗号化されています。 データの転送時には、システム間を行き来するデータも暗号化がされています。
+                    </li>
+                  </ul>
+                </div>
+                <div class="accordionBox">
+                  <ul class="txt_list flex ai-center m-bottom15">
+                    <li class="accordion_icon"><img src="./assets/Image/Q.png" alt=""></li>
+                    <li class="accordion_txt01">操作方法がわからない場合はどうすれば良いですか？</li>
+                  </ul>
+                  <ul class="txt_list flex ai-center">
+                    <li class="accordion_icon"><img src="./assets/Image/A.png" alt=""></li>
+                    <li class="accordion_txt02">
+                      ミルコマではシステム内のご利用ガイドや公式LINEアカウントでの直接の問い合わせにも対応し、迅速な対応、解決を心がけております。
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- オンライン -->
+    <section id="online" class="online">
+      <div class="sec_ttl">
+        <div class="sec_img_online">
+          <img src="./assets/Image/Section_online.png" alt="concept">
+        </div>
+      </div>
+      <div class="online_messageBox">
+        <p class="online_ttl">無料オンライン<br class="sp">相談実施中</p>
+        <p class="online_txt01">「塾を開業するにあたり、システムを検討している!」</p>
+        <p class="online_txt01">「現在使っているシステムが使いにくい!」</p>
+        <p class="online_txt01">「生徒数が増えて、ランニングコストが上がってきた!」</p>
+        <p class="online_txt02">
+          など、様々なお悩みにお答えします。<br>
+          お気軽にご相談ください。</p>
+        <span class="online_img"><img src="./assets/Image/Online_Illustration.png" alt=""></span>
+      </div>
+      <div class="online_flow">
+        <p class="online_flow_ttl t-center">オンライン相談の流れ</p>
+        <div class="online_inner">
+          <div class="online_flowBox flex ai-center jc-around">
+            <div class="flow_item t-center">
+              <span class="flow_item_no t-center ai-center">1</span>
+              <p class="flow_txt01">ご予約フォーム</p>
+              <span class="border">ー</span>
+              <p class="flow_txt02">下記フォームに希望日時を<br>
+                お知らせください。<br>
+                後日、メールにてご連絡します。</p>
+            </div>
+            <div class="yazirushi"><img src="./assets/Image/Arrow_Right.png" alt=""></div>
+            <div class="flow_item t-center">
+              <span class="flow_item_no t-center ai-center">2</span>
+              <p class="flow_txt01">相談日時を決定</p>
+              <span class="border">ー</span>
+              <p class="flow_txt02">ご相談の日時や<br>
+                オンライン相談の方法などを<br>
+                メールでご連絡します。</p>
+            </div>
+            <div class="yazirushi"><img src="./assets/Image/Arrow_Right.png" alt=""></div>
+            <div class="flow_item t-center">
+              <span class="flow_item_no t-center ai-center">3</span>
+              <p class="flow_txt01">ご相談実施</p>
+              <span class="border">ー</span>
+              <p class="flow_txt02">ご相談日時当日に、<br>
+                リマインドのメールを<br>
+                再度ご案内します。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="online_inner">
+        <div class="contactform">
+          <p class="content_ttl t-center">ご予約フォーム</p>
+          <div class="online_rapper">
+            <form onSubmit="sendGoogleForm(); return false" id="consultation_form" class="Form">
+              <div class="Form-Item">
+                <p class="Form-Item-Label">塾名</p>
+                <input type="text" id="schoolName" minlength="2" required class="Form-Item-Input" placeholder="ミルコマ塾">
+              </div>
+              <div class="Form-Item">
+                <p class="Form-Item-Label">ご担当者</p>
+                <input type="text" id="name" minlength="2" required class="Form-Item-Input" placeholder="田中 太郎">
+              </div>
+              <div class="Form-Item">
+                <p class="Form-Item-Label">メールアドレス</p>
+                <input type="email" id="email" required class="Form-Item-Input" placeholder="○○○○○○○○@mirucoma.jp">
+              </div>
+              <div class="Form-Item">
+                <p class="Form-Item-Label">ご希望日時</p>
+                <input type="text" id="date" minlength="2" required class="Form-Item-Input" placeholder="〇/〇(〇) AM00時 or 〇/〇(〇) AM00時 ">
+              </div>
+              <input type="submit" id="consultation_submit_button" class="Form-Btn" value="送信する">
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- お知らせ -->
+    <section id="info" class="info">
+      <div class="sec_ttl">
+        <div class="sec_img_info">
+          <img src="./assets/Image/Section_Information.png" alt="concept">
+        </div>
+        <div class="sec_subttl">
+          <span class="color_g">お</span>知らせ
+        </div>
+      </div>
+      <div class="info_inner">
+        <ul class="news-list" id="announcement-wrapper"></ul>
+        <p class="date_img02"><img src="./assets/Image/Frame.png" alt=""></p>
+        <div class="btn_info">
+          <a href="#">一覧を見る</a>
+
+          <span class="info_img03"><img src="./assets/Image/Information_Illustration.png" alt=""></span>
+        </div>
+        <div class="plan_inner">
+          <div class="contact_btn">
+            <a href="#">
+              <p class="btn_txt01">30日間無料トライアル</p>
+              <p class="btn_txt02">申し込み・お問い合わせはこちら</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- フッター -->
+    <section class="footer">
+      <div class="footer_inner">
+        <nav class="footer_navBox">
+          <ul class="navBox01 flex jc-between">
+            <li><a class="" href="#concept">コンセプト</a></li>
+            <li><a class="" href="#cure">お客様の声</a></li>
+            <li><a class="" href="#plan">プラン紹介</a></li>
+            <li><a class="" href="#faq">FAQ</a></li>
+            <li><a class="" href="#online">オンライン相談</a></li>
+            <li><a class="" href="#info">お知らせ</a></li>
+          </ul>
+          <ul class="navBox02 flex">
+            <li><a class="" href="tos.html">利用規約</a></li>
+            <li><a class="" href="privacy.html">プライバシーポリシー</a></li>
+            <li><a class="" href="commerce.html">特定商取引法に基づく表記</a></li>
+            <li><a class="" href="company.html">運営会社</a></li>
+            <li><a class="" href="contact.html">お問い合わせ</a></li>
+          </ul>
+        </nav>
+        <ul class="navBox03 flex">
+          <li>
+            <ul class="telBox flex ai-center">
+              <li><img src="./assets/Image/Telephone.png" alt=""></li>
+              <li>050-3637-6470</li>
+            </ul>
+          </li>
+          <li>
+            <ul class="timeBox flex ai-center">
+              <li><img src="./assets/Image/Clock.png" alt=""></li>
+              <li>9:00～18:00 (平日のみ)</li>
+            </ul>
+          </li>
+          <li>
+            <ul class="iconBox_i_f flex ai-center">
+              <li class="fb_img"><a class="" href="#"><img src="./assets/Icon/Brand_Facebook_footer.svg" alt=""></a>
+              </li>
+              <li class="insta_img"><a class="" href="#"><img src="./assets/Icon/Brand_Instagram_footer.svg" alt=""></a>
+              </li>
+            </ul>
+          </li>
+          <li class="logo_footer"><a class="" href="index.html"><img src="./assets/Logo/Logo_footer.png" alt=""></a>
+          </li>
+        </ul>
+        <small class="copyright t-center">
+          <p>©2023 Lagoon Corporation, inc.</p>
+        </small>
+      </div>
+    </section>
+  </main>
+  <script type="text/javascript" src="assets/js/lib.js?202008111"></script>
+  <script type="text/javascript" src="assets/js/main.js?202008111"></script>
+
+  <!-- Announcement build js filesー -->
+  <script type="text/javascript" src="assets/js/announcement/fetcher.js"></script>
+  <script type="text/javascript" src="assets/js/announcement/Announcement.js"></script>
+  <script type="text/javascript" src="assets/js/announcement/buildAnnouncements.js"></script>
+
+  <!-- Send a consultation request to Google From -->
+  <script type="text/javascript" src="assets/js/sendGoogleForm.js"></script>
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 </body>
+
 </html>

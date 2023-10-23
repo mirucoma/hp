@@ -1,0 +1,407 @@
+// ブレイクポイントを指定
+$tab: 800px;
+$sp: 480px;
+
+@mixin tab {
+    @media screen and (max-width: ($tab)) {
+        @content;
+    }
+}
+
+@mixin sp {
+    @media screen and (max-width: ($sp)) {
+        @content;
+    }
+}
+
+header {
+
+    position: relative;
+
+    &.hide {
+        transform: translateY(-100%);
+    }
+
+    width: 100%;
+
+}
+
+.main {
+    position: relative;
+    height: 100vh;
+    background-image: url(../assets/Image/Top_bg_Web.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    @include tab {
+        background-image: url(../assets/Image/Top_bg_Mobile.png);
+    }
+
+    @include sp {
+        background-image: url(../assets/Image/fv_700x1200.webp);
+
+    }
+}
+
+.header_inner {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.headerBox {
+    position: fixed;
+    z-index: 999;
+    display: flex;
+    width: 100%;
+    animation: UpAnime 0.5s forwards;
+    justify-content: center;
+    background-color: #fff;
+
+    @include tab {
+        align-items: center;
+        padding: 20px 0;
+        justify-content: space-evenly;
+    }
+
+    @include sp {
+        align-items: center;
+        padding: 20px 0;
+    }
+}
+
+@keyframes UpAnime {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+}
+
+/*　下に下がる動き　*/
+
+.header,
+.DownMove {
+    animation: DownAnime 0.5s forwards;
+}
+
+@keyframes DownAnime {
+    from {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.leftBox {
+    margin-top: 40px;
+    margin-right: 5vw;
+
+    @include tab {
+        margin-top: 0px;
+        margin-left: 10px;
+        margin-right: 12vw;
+    }
+
+    @include sp {
+        margin-top: 0;
+        margin-left: 15px;
+        margin-right: 12vw;
+    }
+}
+
+.header_icon {
+    @include tab {
+        margin-right: 20px;
+        margin-right: 9vw;
+    }
+
+    @include sp {
+        margin-right: 20px;
+        margin-right: 15vw;
+    }
+}
+
+.header_icon li {
+    @include tab {
+        img {
+            width: 35px;
+        }
+    }
+
+    img {
+        @include sp {
+            width: 35px;
+        }
+    }
+}
+
+.last-of-type {
+    @include tab {
+        margin-right: 9.375vw;
+    }
+}
+
+#global_nav ul {
+    display: flex;
+    align-items: center;
+
+    @include tab {
+        display: block;
+    }
+
+    li {
+        a {
+            font-weight: bold;
+        }
+
+        font-size: 1.4rem;
+
+        &:last-of-type {
+            margin-right: 2.8vw;
+            position: relative;
+        }
+
+        &:not(last-of-type) {
+            margin-right: calc(25 * (100vw / 1920));
+        }
+    }
+
+    @include tab {
+
+        li {
+            margin-top: 4.8rem;
+            width: auto;
+            height: 4rem;
+            display: block;
+            text-align: start;
+            font-size: 2.4rem;
+            line-height: 29.05px;
+            font-weight: 700;
+
+            &:last-of-type {
+                background-color: transparent;
+                overflow: unset;
+            }
+
+            a {
+                color: #009688;
+            }
+        }
+    }
+
+    @include sp {
+        li {
+            margin-top: 2.3rem;
+            width: auto;
+            height: 4rem;
+            display: block;
+            text-align: start;
+            font-size: 1.8rem;
+            line-height: 29.05px;
+            font-weight: 700;
+
+            &:last-of-type {
+                background-color: transparent;
+                overflow: unset;
+            }
+
+            a {
+                color: #009688;
+            }
+        }
+    }
+
+    .nav02 {
+        font-weight: 400;
+        border-bottom: 2px solid #009688;
+        padding-bottom: 100px;
+
+        @include sp {
+            padding-bottom: 60px;
+        }
+
+        li {
+            a {
+                font-weight: 400;
+            }
+        }
+    }
+}
+
+
+.nav_inner {
+    @include tab {
+        max-width: 654px;
+        width: 90%;
+        margin: auto;
+    }
+
+    ul li a {
+        img {
+            @include sp {
+                width: 70%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .gnavi {
+        nav {
+            position: fixed;
+            top: 0;
+            right: -800px;
+            height: 100dvh;
+            background: #fff;
+            box-sizing: border-box;
+            z-index: 10;
+            width: 100%;
+            overflow-y: scroll;
+        }
+
+        position: fixed;
+        top: 2.8rem;
+        right: 2rem;
+        width: 3rem;
+        height: 4.8rem;
+        z-index: 3;
+        box-sizing: border-box;
+        cursor: pointer;
+        -webkit-transition: all 400ms;
+        transition: all 400ms;
+
+        @include sp {
+            top: 2.8rem;
+            right: 1rem;
+            width: 3rem;
+            height: 4.8rem;
+        }
+
+        .jsHumb {
+            position: absolute;
+            width: 2.4rem;
+            height: 0.3rem;
+            background: #0A0A0A;
+            border-radius: 10px;
+            -webkit-transition: all 400ms;
+            transition: all 400ms;
+            z-index: 300;
+
+            &:nth-of-type(1) {
+                top: 2%;
+            }
+
+            &:nth-of-type(2) {
+                top: 30%;
+            }
+        }
+
+        &.open .jsHumb {
+            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+            top: 20%;
+            background-color: #0A0A0A !important;
+
+            &:nth-of-type(2) {
+                transform: rotate(-45deg);
+                -webkit-transform: rotate(-45deg);
+                -moz-transform: rotate(-45deg);
+                -ms-transform: rotate(-45deg);
+                -o-transform: rotate(-45deg);
+            }
+        }
+    }
+
+    .telBox_hub,
+    .timeBox_hub {
+        img {
+            width: 36px;
+
+            @include sp {
+                width: 30px;
+            }
+        }
+
+        p {
+            color: #009688;
+            font-size: 2.8rem;
+            line-height: 33.89px;
+            font-weight: 500;
+
+            @include sp {
+                font-size: 1.8rem;
+                line-height: 33.89px;
+            }
+        }
+    }
+
+    .telBox_hub {
+        margin: 100px 0 13px;
+
+        @include sp {
+            margin: 50px 0 13px;
+        }
+    }
+
+    .timeBox_hub {
+        margin-bottom: 48px;
+
+        @include sp {
+            margin-bottom: 30px;
+        }
+    }
+
+    .iconBox_hub {
+        div {
+            margin-right: 36px;
+        }
+
+        img {
+            width: 35px;
+        }
+    }
+
+    .copyright_hub {
+        margin: 48px 0;
+
+        p {
+            color: #009688;
+            font-size: 2rem;
+            line-height: 28.96px;
+            font-weight: 400;
+
+            @include sp {
+                font-size: 1.4rem;
+            }
+        }
+    }
+}
+
+.login {
+    background-color: #B3B3B3;
+    width: 120px;
+    height: 48px;
+    justify-content: center;
+    border-radius: 0px 0px 8px 8px;
+
+    li {
+
+        font-size: 1.4rem;
+        line-height: 20.27px;
+        font-weight: 400;
+        color: #fff;
+    }
+}
