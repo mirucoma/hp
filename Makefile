@@ -1,2 +1,2 @@
 test:
-	python -m http.server -d docs/
+	python3 -m http.server -d docs/
