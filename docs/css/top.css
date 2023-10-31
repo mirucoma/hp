@@ -1039,6 +1039,7 @@ html {
 
 .cure_item {
   width: 720px;
+  height: 100%;
   flex-shrink: 0;
   background: #fff;
   border-radius: 24px;
@@ -2369,6 +2370,7 @@ html {
 
 .loop02__box {
   display: flex;
+  align-items: stretch;
   animation: loop-list 50s linear infinite;
 }
 
