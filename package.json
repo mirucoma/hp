@@ -1,0 +1,14 @@
+{
+  "name": "@mirucoma/hp",
+  "version": "1.0.0",
+  "private": true,
+  "description": "mirucoma hp",
+  "scripts": {
+    "format": "biome format docs",
+    "format:write": "biome format docs --write"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@biomejs/biome": "1.3.1"
+  }
+}
