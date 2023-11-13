@@ -2360,30 +2360,12 @@ html {
   }
 }
 
-.loop02 {
-  padding-top: 30px;
-  padding-bottom: 30px;
-  display: flex;
-  overflow: hidden;
-  pointer-events: none;
-}
-
-.loop02__box {
+.loop_container {
   display: flex;
   align-items: stretch;
-  animation: loop-list 50s linear infinite;
-}
+  animation: loop-list 20s linear infinite;
 
-.loop02__item {
-  margin: 0 16px;
-}
-.loop02__item a {
-  width: 33.3333333333vw;
-  display: block;
-}
-
-.loop02__item img {
-  width: 100%;
+  gap: 16px;
 }
 
 @keyframes loop-list {
@@ -2394,36 +2376,7 @@ html {
     transform: translateX(-100%);
   }
 }
-.loop02:hover .loop02__box {
-  animation-play-state: paused;
-}
 
-.slider-container {
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-}
-
-.slider {
-  display: flex;
-  animation: slide 10s linear infinite;
-}
-
-.slide {
-  min-width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-@keyframes slide {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
 .css-1veaag3 {
   padding: 200px 0 100px;
   width: 80%;
