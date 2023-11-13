@@ -2407,8 +2407,9 @@ html {
   }
 
   .use_plans {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    flex-wrap: wrap;
+    display: flex;
     gap: 8px;
 
     & p {
