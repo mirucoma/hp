@@ -39,12 +39,17 @@ function NewsItem(props) {
 }
 
 export async function NewsList() {
-  const news = await getNews(NEWS_URL);
+  try {
+    const news = await getNews(NEWS_URL);
 
-  return van.tags.ul(
-    { class: "news-list" },
-    news.map((news) => {
-      return NewsItem(news);
-    })
-  );
+    return van.tags.ul(
+      { class: "news-list" },
+      news.map((news) => {
+        return NewsItem(news);
+      })
+    );
+  } catch (e) {
+    console.error(e);
+    return null;
+  }
 }
