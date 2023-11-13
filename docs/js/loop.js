@@ -22,12 +22,6 @@ export const loop = (container, speed = 0.5) => {
       container.scrollLeft -= singleContentWidth;
     }
 
-    console.log({
-      accumulatedScroll,
-      scrollLeft: container.scrollLeft,
-      scrollWidth: container.scrollWidth,
-    });
-
     requestAnimationFrame(scroll);
   };
 
