@@ -2363,18 +2363,8 @@ html {
 .loop_container {
   display: flex;
   align-items: stretch;
-  animation: loop-list 20s linear infinite;
-
-  gap: 16px;
-}
-
-@keyframes loop-list {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-100%);
-  }
+  overflow-x: hidden;
+  gap: 24px;
 }
 
 .css-1veaag3 {
