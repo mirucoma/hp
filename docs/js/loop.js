@@ -8,6 +8,7 @@ export const loop = (container, speed = 0.5) => {
   container.innerHTML = originalContent.repeat(3);
   const singleContentWidth = container.scrollWidth / 3;
 
+  let animationFrameId = null;
   let accumulatedScroll = 0;
 
   const scroll = () => {
@@ -22,8 +23,17 @@ export const loop = (container, speed = 0.5) => {
       container.scrollLeft -= singleContentWidth;
     }
 
-    requestAnimationFrame(scroll);
+    animationFrameId = requestAnimationFrame(scroll);
   };
 
-  requestAnimationFrame(scroll);
+  animationFrameId = requestAnimationFrame(scroll);
+
+  // ハッシュチェンジ中にアニメーションを一時停止
+  window.addEventListener("hashchange", () => {
+    cancelAnimationFrame(animationFrameId);
+    // 1秒後に再開
+    setTimeout(() => {
+      animationFrameId = requestAnimationFrame(scroll);
+    }, 1000);
+  });
 };
