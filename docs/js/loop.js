@@ -29,10 +29,12 @@ export const loop = (container, speed = 0.5) => {
   animationFrameId = requestAnimationFrame(scroll);
 
   // ハッシュチェンジ中にアニメーションを一時停止
+  let timeoutId = null;
   window.addEventListener("hashchange", () => {
     cancelAnimationFrame(animationFrameId);
+    clearTimeout(timeoutId);
     // 1秒後に再開
-    setTimeout(() => {
+    timeoutId = setTimeout(() => {
       animationFrameId = requestAnimationFrame(scroll);
     }, 1000);
   });
