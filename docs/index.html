@@ -5,18 +5,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ミルコマ</title>
+  <link rel="stylesheet" href="css/variables.css" />
+
   <link rel="stylesheet" href="css/top.css?20231023" />
   <link rel="stylesheet" href="css/news.css?20231023" />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap"
     rel="stylesheet" />
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-  <link rel="stylesheet" type="text/css"
-    href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
   <link rel="icon" href="./assets/Logo/favicon.ico" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/dialog-polyfill/0.5.0/dialog-polyfill.min.js" defer></script>
 
-  <script type="text/javascript"
-    src="https://cdn.jsdelivr.net/gh/vanjs-org/van/public/van-1.2.3.nomodule.min.js"></script>
+  <link rel="stylesheet" href="css/accordion.css" />
+  <link rel="stylesheet" href="css/faq.css" />
 </head>
 
 <body>
@@ -437,56 +435,48 @@
           <span class="color_g">よ</span>くある質問
         </div>
       </div>
+
       <!-- アコーディオン -->
       <div class="accordion_rapper">
         <div class="section s_02">
           <span class="accordion_img">
             <img src="./assets/Image/FAQ_Illustration.png" alt="">
           </span>
-          <div class="accordion_one">
-            <div class="accordion_header">その他<div class="i_box"><i class="one_i"></i></div>
-            </div>
-            <div class="accordion_inner">
-              <div class="box_one">
-                <div class="accordionBox">
-                  <ul class="txt_list flex ai-center m-bottom15">
-                    <li class="accordion_icon"><img src="./assets/Image/Q.png" alt=""></li>
-                    <li class="accordion_txt01">一つの機能から使うことはできますか？</li>
-                  </ul>
-                  <ul class="txt_list flex ai-center">
-                    <li class="accordion_icon"><img src="./assets/Image/A.png" alt=""></li>
-                    <li class="accordion_txt02">
-                      はい、ミルコマは一つの機能から使っていただくことが可能になっております。<br />
-                      入退室機能だけ1校舎あたり税込1100円でのご利用も可能です。
-                    </li>
-                  </ul>
-                </div>
-                <div class="accordionBox">
-                  <ul class="txt_list flex ai-center m-bottom15">
-                    <li class="accordion_icon"><img src="./assets/Image/Q.png" alt=""></li>
-                    <li class="accordion_txt01">クラウドのセキュリティは大丈夫ですか？</li>
-                  </ul>
-                  <ul class="txt_list flex ai-center">
-                    <li class="accordion_icon"><img src="./assets/Image/A.png" alt=""></li>
-                    <li class="accordion_txt02">
-                      ミルコマはAmazon Web Serviceを用いてクラウド運用しており、各システムは定期的なセキュリティアップデートを行っています。
-                      また、お客様のデータを保存しているデータベースはAES-256 暗号化アルゴリズムを使用して暗号化されています。 データの転送時には、システム間を行き来するデータも暗号化がされています。
-                    </li>
-                  </ul>
-                </div>
-                <div class="accordionBox">
-                  <ul class="txt_list flex ai-center m-bottom15">
-                    <li class="accordion_icon"><img src="./assets/Image/Q.png" alt=""></li>
-                    <li class="accordion_txt01">操作方法がわからない場合はどうすれば良いですか？</li>
-                  </ul>
-                  <ul class="txt_list flex ai-center">
-                    <li class="accordion_icon"><img src="./assets/Image/A.png" alt=""></li>
-                    <li class="accordion_txt02">
-                      ミルコマではシステム内のご利用ガイドや公式LINEアカウントでの直接の問い合わせにも対応し、迅速な対応、解決を心がけております。
-                    </li>
-                  </ul>
-                </div>
-              </div>
+
+          <div class="accordion_container">
+            <input id="faq_other" class="accordion_checkbox" type="checkbox">
+            <label class="accordion_label" for="faq_other">
+              その他
+              <i class="accordion_label_icon"></i>
+            </label>
+            <div class="accordion_content">
+              <ul class="faq_list">
+                <li class="faq_list_item">
+                  <div class="faq_question">
+                    一つの機能から使うことはできますか？
+                  </div>
+                  <div class="faq_answer">
+                    はい、ミルコマは一つの機能から使っていただくことが可能になっております。<br />入退室機能だけ1校舎あたり税込1100円でのご利用も可能です。
+                  </div>
+                </li>
+                <li class="faq_list_item">
+                  <div class="faq_question">
+                    クラウドのセキュリティは大丈夫ですか？
+                  </div>
+                  <div class="faq_answer">
+                    ミルコマはAmazon Web Serviceを用いてクラウド運用しており、各システムは定期的なセキュリティアップデートを行っています。
+                    また、お客様のデータを保存しているデータベースはAES-256 暗号化アルゴリズムを使用して暗号化されています。 データの転送時には、システム間を行き来するデータも暗号化がされています。
+                  </div>
+                </li>
+                <li class="faq_list_item">
+                  <div class="faq_question">
+                    操作方法がわからない場合はどうすれば良いですか？
+                  </div>
+                  <div class="faq_answer">
+                    ミルコマではシステム内のご利用ガイドや公式LINEアカウントでの直接の問い合わせにも対応し、迅速な対応、解決を心がけております。
+                  </div>
+                </li>
+              </ul>
             </div>
           </div>
         </div>

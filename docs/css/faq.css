@@ -1,0 +1,65 @@
+.faq_list {
+    border-top: solid 2px var(--primary-color);
+
+    & > * + * {
+        border-top: solid 2px var(--primary-color);
+    }
+}
+
+.faq_list_item {
+    padding: 32px 24px;
+    display: grid;
+    gap: 16px;
+
+    color: var(--text-primary-color);
+    font-size: 16px;
+    font-weight: 700;
+
+    @media (width <= 800px) {
+        padding: 32px 0;
+    }
+}
+
+.faq_question {
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+
+    /* 子要素の直前にQアイコンを追加 */
+    &::before {
+        content: "Q";
+        display: inline-flex;
+        flex-shrink: 0;
+        justify-content: center;
+        align-items: center;
+        font-size: 12px;
+        font-weight: 700;
+        background-color: var(--primary-color);
+        color: #fff;
+        border-radius: 100%;
+        width: 32px;
+        height: 32px;
+    }
+}
+
+.faq_answer {
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+
+    /* 子要素の直前にQアイコンを追加 */
+    &::before {
+        content: "A";
+        display: inline-flex;
+        flex-shrink: 0;
+        justify-content: center;
+        align-items: center;
+        font-size: 12px;
+        font-weight: 700;
+        background-color: #E91E63;
+        color: #fff;
+        border-radius: 100%;
+        width: 32px;
+        height: 32px;
+    }
+}
