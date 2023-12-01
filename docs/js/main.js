@@ -1,17 +1,26 @@
 import van from "https://cdn.jsdelivr.net/gh/vanjs-org/van/public/van-1.2.3.min.js";
-
 import { NewsList } from "./news.js";
 import { loop } from "./loop.js";
 import { menu } from "./menu.js";
 
 // Render the news list
-van.add(document.getElementById("news-list-root"), await NewsList());
+const newsListRoot = document.getElementById("news-list-root");
 
-// Apply the loop
-loop(document.getElementById("customer_voices"));
+if (newsListRoot) {
+  van.add(newsListRoot, await NewsList());
+}
+
+// Apply the loop functionality if 'customer_voices' element exists
+const customerVoicesElement = document.getElementById("customer_voices");
+
+if (customerVoicesElement) {
+  loop(customerVoicesElement);
+}
 
 // Apply the menu
-menu(
-  document.getElementById("menu_trigger"),
-  document.getElementById("nav_sp")
-);
+const menuTrigger = document.getElementById("menu_trigger");
+const navSp = document.getElementById("nav_sp");
+
+if (menuTrigger && navSp) {
+  menu(menuTrigger, navSp);
+}
