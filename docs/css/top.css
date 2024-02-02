@@ -1,8 +1,9 @@
 @charset "UTF-8";
 
 /*common*/
-html,
+html ,
 body {
+  scroll-padding-top: 80px;
   font-size: 62.5%;
   letter-spacing: 0;
   color: #333;
@@ -146,6 +147,9 @@ img {
   }
 }
 @media (max-width: 767px) {
+  html {
+    scroll-padding-top: 64px;
+  }
   .sp__flex {
     display: flex;
   }
