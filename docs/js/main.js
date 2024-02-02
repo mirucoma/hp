@@ -14,7 +14,7 @@ if (newsListRoot) {
 const customerVoicesElement = document.getElementById("customer_voices");
 
 if (customerVoicesElement) {
-  setTimeout(() => loop(customerVoicesElement), 3000);
+  setTimeout(() => loop(customerVoicesElement), 8000);
 }
 
 // Apply the menu
