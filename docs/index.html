@@ -27,6 +27,22 @@
     gtag('js', new Date());
     gtag('config', 'AW-965602067');
   </script>
+
+  <!-- Event snippet for 予約フォームの送信 conversion page
+  <script>
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+        'send_to': 'AW-965602067/iPnrCPPtgo8ZEJPWt8wD',
+        'event_callback': callback
+      });
+      return false;
+    }
+  </script>
 </head>
 
 <body>
@@ -618,7 +634,7 @@
                 <input type="text" id="date" minlength="2" required class="Form-Item-Input"
                   placeholder="〇/〇(〇) AM00時 or 〇/〇(〇) AM00時 ">
               </div>
-              <input type="submit" id="consultation_submit_button" class="Form-Btn" value="送信する">
+              <input type="submit" id="consultation_submit_button" class="Form-Btn" value="送信する" onclick="gtag_report_conversion();">
             </form>
           </div>
         </div>
