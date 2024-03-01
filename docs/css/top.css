@@ -1,13 +1,14 @@
 @charset "UTF-8";
 
 /*common*/
-html ,
+html,
 body {
   scroll-padding-top: 80px;
   font-size: 62.5%;
   letter-spacing: 0;
   color: #333;
-  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium",
+    "游ゴシック", "Yu Gothic", sans-serif;
 }
 
 a {
@@ -263,19 +264,22 @@ h2{
 .js-u-fade {
   opacity: 0;
   transform: translateY(50px);
-  transition: opacity 0.1s cubic-bezier(0.5, 1, 0.89, 1), transform 0.3s cubic-bezier(0.5, 1, 0.89, 1);
+  transition: opacity 0.1s cubic-bezier(0.5, 1, 0.89, 1),
+    transform 0.3s cubic-bezier(0.5, 1, 0.89, 1);
 }
 
 .js-r-fade {
   transform: translateX(60px);
   opacity: 0;
-  transition: opacity 0.1s cubic-bezier(0.5, 1, 0.89, 1), transform 0.3s cubic-bezier(0.5, 1, 0.89, 1);
+  transition: opacity 0.1s cubic-bezier(0.5, 1, 0.89, 1),
+    transform 0.3s cubic-bezier(0.5, 1, 0.89, 1);
 }
 
 .js-l-fade {
   transform: translateX(-60px);
   opacity: 0;
-  transition: opacity 0.3s cubic-bezier(0.5, 1, 0.89, 1), transform 0.3s cubic-bezier(0.5, 1, 0.89, 1);
+  transition: opacity 0.3s cubic-bezier(0.5, 1, 0.89, 1),
+    transform 0.3s cubic-bezier(0.5, 1, 0.89, 1);
 }
 
 .fade-in {
@@ -607,7 +611,7 @@ header.hide {
     position: absolute;
     width: 2.4rem;
     height: 0.3rem;
-    background: #0A0A0A;
+    background: #0a0a0a;
     border-radius: 10px;
     -webkit-transition: all 400ms;
     transition: all 400ms;
@@ -626,7 +630,7 @@ header.hide {
     -ms-transform: rotate(45deg);
     -o-transform: rotate(45deg);
     top: 20%;
-    background-color: #0A0A0A !important;
+    background-color: #0a0a0a !important;
   }
   .gnavi.open .jsHumb:nth-of-type(2) {
     transform: rotate(-45deg);
@@ -705,7 +709,7 @@ header.hide {
   }
 }
 .login {
-  background-color: #FFC107;
+  background-color: #ffc107;
   width: 120px;
   height: 48px;
   justify-content: center;
@@ -740,11 +744,11 @@ header.hide {
 }
 
 .color_g {
-  color: #089A89;
+  color: #089a89;
 }
 
 .color_o {
-  color: #E97F00;
+  color: #e97f00;
 }
 
 .sec_ttl {
@@ -779,7 +783,7 @@ header.hide {
 }
 
 .contact_btn {
-  background: #FF9107;
+  background: #cccccc;
   border-radius: 76px;
   position: relative;
   display: flex;
@@ -800,10 +804,10 @@ header.hide {
 }
 
 .btn_txt01 {
-  font-size: 3.6rem;
+  font-size: 3rem;
   line-height: 52.13px;
   font-weight: 700;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 @media screen and (max-width: 480px) {
   .btn_txt01 {
@@ -816,8 +820,8 @@ header.hide {
   content: "";
   width: 10px;
   height: 10px;
-  border-top: 5px solid #FFFFFF;
-  border-right: 5px solid #FFFFFF;
+  border-top: 5px solid #ffffff;
+  border-right: 5px solid #ffffff;
   transform: rotate(45deg) translateY(-50%);
   position: absolute;
   top: 50%;
@@ -829,8 +833,8 @@ header.hide {
   .contact_btn a:after {
     width: 5px;
     height: 5px;
-    border-top: 3px solid #FFFFFF;
-    border-right: 3px solid #FFFFFF;
+    border-top: 3px solid #ffffff;
+    border-right: 3px solid #ffffff;
     top: 50%;
     right: 20px;
   }
@@ -952,7 +956,7 @@ html {
 .cure {
   position: relative;
   padding: 10px 0 130px;
-  background-color: #EBEBEB;
+  background-color: #ebebeb;
 }
 
 .sec_img_cure {
@@ -1043,7 +1047,7 @@ html {
   line-height: 17.38px;
   padding: 5px 22px;
   border-radius: 30px;
-  background: #089A89;
+  background: #089a89;
   margin-bottom: 10px;
 }
 
@@ -1197,7 +1201,7 @@ html {
 .plan_ttlBox {
   text-align: left;
   padding-bottom: 28px;
-  border-bottom: 3px solid #AAAAAA;
+  border-bottom: 3px solid #aaaaaa;
 }
 @media screen and (max-width: 800px) {
   .plan_ttlBox {
@@ -1338,7 +1342,7 @@ html {
   .plan_listBox {
     padding-bottom: 64px;
     margin-bottom: 93px;
-    border-bottom: 3px solid #AAAAAA;
+    border-bottom: 3px solid #aaaaaa;
     width: 100%;
   }
 }
@@ -1359,7 +1363,7 @@ html {
   width: 3px;
   /*--縦線の太さ(幅)--*/
   height: 95%;
-  background-color: #AAA;
+  background-color: #aaa;
   /*--縦線の色--*/
 }
 @media screen and (max-width: 800px) {
@@ -1404,7 +1408,7 @@ html {
 }
 
 .iconBox01 {
-  border-bottom: 1px solid #B4B4B4;
+  border-bottom: 1px solid #b4b4b4;
 }
 
 .sankaku_g {
@@ -1412,7 +1416,7 @@ html {
   height: 0;
   border-style: solid;
   border-width: 5.335px 0 5.335px 8.41px;
-  border-color: transparent transparent transparent #089A89;
+  border-color: transparent transparent transparent #089a89;
 }
 
 .sankaku_o {
@@ -1420,7 +1424,7 @@ html {
   height: 0;
   border-style: solid;
   border-width: 5.335px 0 5.335px 8.41px;
-  border-color: transparent transparent transparent #E97F00;
+  border-color: transparent transparent transparent #e97f00;
 }
 
 .plan_subimg {
@@ -1430,7 +1434,7 @@ html {
 
 .faq {
   padding: 1px 0 170px;
-  background-color: #EBEBEB;
+  background-color: #ebebeb;
 }
 
 .sec_img_faq img {
@@ -1480,7 +1484,6 @@ html {
     width: 100px;
   }
 }
-
 
 .online {
   background-color: #009688;
@@ -1579,7 +1582,14 @@ html {
   font-size: 1.6rem;
   line-height: 23.17px;
   font-weight: 500;
-  background: linear-gradient(90deg, #009688 0%, #fff 30%, #fff 50%, #fff 70%, #009688 100%);
+  background: linear-gradient(
+    90deg,
+    #009688 0%,
+    #fff 30%,
+    #fff 50%,
+    #fff 70%,
+    #009688 100%
+  );
   width: 487.34px;
   margin: 0 auto 70px;
   color: #009688;
@@ -1781,7 +1791,7 @@ html {
   }
 }
 .Form-Item-Input {
-  border: 1px solid #AAA;
+  border: 1px solid #aaa;
   border-radius: 8px;
   padding: 0 0 0 24px;
   height: 48px;
@@ -2663,4 +2673,4 @@ html {
   top: 50%;
   transform: translate(-50%, -50%);
   width: 80%;
-}/*# sourceMappingURL=top.css.map */
+} /*# sourceMappingURL=top.css.map */
