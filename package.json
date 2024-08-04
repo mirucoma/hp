@@ -1,15 +1,16 @@
 {
-  "packageManager": "yarn@4.2.2",
+  "packageManager": "yarn@4.4.0",
   "name": "@mirucoma/hp",
   "version": "1.0.0",
   "private": true,
   "description": "mirucoma hp",
   "scripts": {
-    "dev": "python3 -m http.server 8000 -d docs",
+    "dev": "live-server docs --port=3000 --no-browser",
     "format": "biome format docs",
     "format:write": "biome format docs --write"
   },
   "devDependencies": {
-    "@biomejs/biome": "1.4.1"
+    "@biomejs/biome": "1.8.3",
+    "live-server": "^1.2.2"
   }
 }
